@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>热点早晚报 · 2026-11-19 · 早报/晚报</title>
+<meta name="description" content="2026-11-19 热点早晚报，早报 11 条、晚报 0 条，快速看清当天重要的财经、科技、民生热点。">
+<style>
+:root{--paper:#f7f5f0;--surface:#fff;--ink:#1c1b19;--ink-2:#5c584f;--ink-3:#928d82;--line:#e8e3d9;--accent:#b23a2e;--accent-soft:#fbece9;--gold:#a8812c;--gold-soft:#f7f0dd;--blue:#2f5d8a;--blue-soft:#e9f0f7;--green:#2f6b4f;--green-soft:#e7f2ec;--purple:#6b4a8c;--purple-soft:#f0eaf7;--shadow:0 1px 2px rgba(30,25,15,.04),0 8px 24px rgba(30,25,15,.05);--serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",STSong,SimSun,serif;--sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+header.masthead{padding:34px 0 0}
+.topline{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);letter-spacing:.08em;border-top:3px double var(--ink);padding-top:10px}
+.brand{text-align:center;padding:18px 0 14px;border-bottom:1px solid var(--ink)}
+.brand h1{font-family:var(--serif);font-size:50px;letter-spacing:.18em;font-weight:700;line-height:1.1}
+.brand .en{font-size:11px;letter-spacing:.42em;color:var(--accent);margin-top:8px;text-transform:uppercase}
+.brand .tagline{font-size:13px;color:var(--ink-2);margin-top:12px}
+.metaline{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--ink-3);padding:10px 0;border-bottom:1px solid var(--line)}
+.live i{width:7px;height:7px;border-radius:50%;background:#3a9e63;display:inline-block;margin-right:6px}
+.metaline .navlinks{display:flex;gap:14px;margin-left:auto}
+.metaline .navlinks a{color:var(--ink-2);border-bottom:1px solid var(--line);padding-bottom:1px}
+.metaline .navlinks a:hover{color:var(--accent);border-color:var(--accent)}
+.pagenav{padding:20px 0 4px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.datechip{font-family:var(--serif);font-size:24px;font-weight:700}
+.datechip small{font-family:var(--sans);font-size:12px;color:var(--ink-3);font-weight:400;margin-left:8px}
+.pn-right{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink-3)}
+.pn-right a{color:var(--blue);border-bottom:1px dashed var(--line)}
+.pn-right a:hover{border-color:var(--blue)}
+.pn-right .disabled{color:var(--ink-3);opacity:.5}
+.homebar{margin-top:12px;background:var(--gold-soft);border:1px solid #efe4c6;border-radius:5px;padding:10px 14px;font-size:12.5px;color:#7a6320;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.homebar a{color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent)}
+.summary{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:4px;padding:18px 20px;margin:14px 0 24px;box-shadow:var(--shadow)}
+.summary .label{font-size:11px;letter-spacing:.2em;color:var(--accent);font-weight:600}
+.summary p{font-family:var(--serif);font-size:16px;line-height:1.85;margin-top:6px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.tab{appearance:none;background:none;border:none;border-bottom:2px solid transparent;padding:11px 20px;font-size:15px;font-family:var(--sans);color:var(--ink-2);cursor:pointer;transition:.18s;display:flex;align-items:center;gap:8px}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.tab .num{font-size:11px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:0 7px;color:var(--ink-3)}
+.panel{display:none;animation:fade .3s ease}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sec-intro{display:flex;align-items:baseline;gap:14px;margin:4px 0 16px}
+.sec-intro .big{font-family:var(--serif);font-size:26px;font-weight:700}
+.sec-intro .sub{font-size:12px;color:var(--ink-3)}
+.sec-intro .rule{flex:1;height:1px;background:var(--line)}
+.news{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:18px 8px;border-bottom:1px solid var(--line)}
+.news .idx{font-family:var(--serif);font-size:29px;font-weight:700;color:var(--line);line-height:1}
+.cat{display:inline-block;font-size:11px;letter-spacing:.05em;padding:2px 9px;border-radius:3px;font-weight:600}
+.cat-财经{background:var(--gold-soft);color:var(--gold)}.cat-科技{background:var(--blue-soft);color:var(--blue)}.cat-民生{background:var(--green-soft);color:var(--green)}.cat-体育{background:var(--purple-soft);color:var(--purple)}.cat-娱乐{background:var(--accent-soft);color:var(--accent)}.cat-航天{background:var(--green-soft);color:var(--green)}.cat-时政{background:var(--accent-soft);color:var(--accent)}
+.news h3{font-family:var(--serif);font-size:19px;line-height:1.5;font-weight:700;margin:8px 0 6px}
+.news p{font-size:14px;color:var(--ink-2);line-height:1.8}
+.news .foot{margin-top:9px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-3)}
+.news .foot .tag{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:1px 9px}
+.qa-wrap{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:18px 22px}
+.qa-wrap h2{font-family:var(--serif);font-size:22px;margin-bottom:4px}
+.qa-tip{font-size:12px;color:var(--ink-3);margin-bottom:16px}
+.qa-item{padding:14px 0;border-top:1px dashed var(--line)}
+.qa-q{font-weight:600;font-size:15px;display:flex;gap:10px;align-items:flex-start}
+.qn{color:var(--accent);font-size:12px;flex:0 0 auto;margin-top:3px}
+.qa-a{display:flex;gap:10px;margin-top:8px;color:var(--ink-2);font-size:14px;line-height:1.8}
+.an{flex:0 0 auto;width:20px;height:20px;border-radius:5px;background:var(--accent);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.arch-head{padding:22px 0 8px}
+.arch-head h2{font-family:var(--serif);font-size:27px}
+.arch-head p{font-size:12px;color:var(--ink-3);margin-top:4px}
+.arch-item{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin:12px 0;box-shadow:var(--shadow)}
+.arch-item .arch-date{font-family:var(--serif);font-size:19px;font-weight:700;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.arch-item .arch-date a:hover{color:var(--accent)}
+.arch-item .arch-date small{font-family:var(--sans);font-size:12px;color:var(--ink-3);font-weight:400}
+.badge-new{font-family:var(--sans);font-size:10px;background:var(--accent);color:#fff;border-radius:20px;padding:2px 8px;font-weight:600;letter-spacing:.05em}
+.arch-item .arch-sum{font-size:13.5px;color:var(--ink-2);line-height:1.75;margin:8px 0 10px}
+.arch-item .arch-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-3)}
+.arch-item .arch-links{margin-left:auto;display:flex;gap:12px}
+.arch-item .arch-links a{color:var(--blue);border-bottom:1px dashed var(--line)}
+.arch-item .arch-links a:hover{border-color:var(--blue)}
+.empty{text-align:center;color:var(--ink-3);padding:40px 0}
+footer{margin-top:50px;padding:24px 0 40px;border-top:3px double var(--ink);font-size:12px;color:var(--ink-3);line-height:1.9}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:640px){.brand h1{font-size:34px}.news{grid-template-columns:26px 1fr;gap:10px;padding:14px 2px}.news .idx{font-size:21px}.news h3{font-size:17px}.tab{padding:10px 12px;font-size:14px}.qa-wrap{padding:14px}.arch-item .arch-links{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="topline"><span>每日热点 · 早晚上新</span><span>最新一期 · 第 002 期</span></div>
+    <div class="brand">
+      <h1><a href="index.html">热点早晚报</a></h1>
+      <div class="en">Morning &amp; Evening Brief</div>
+      <div class="tagline">每天早上和晚上，帮你把当天最值得看的事快速过一遍</div>
+    </div>
+    <div class="metaline">
+      <span class="live"><i></i>每日更新</span>
+      <span>最近更新：2026-11-19 09:14</span>
+      <span>已收录 2 天</span>
+      <span class="navlinks"><a href="index.html">首页</a><a href="archive.html">目录</a></span>
+    </div>
+  </header>
+
+  <nav class="pagenav">
+    <div class="datechip">2026 年 11 月 19 日<small>星期四</small></div>
+    <div class="pn-right">
+      <a href="2026-11-18.html">← 更早一期 · 11月18日</a>
+      <span class="disabled">已是最新 →</span>
+      <a href="archive.html">全部期数 →</a>
+    </div>
+  </nav>
+
+  <div class="homebar"><span>这里展示<strong>最新一期</strong>（2026-11-19）的早报与晚报，与当日独立页内容一致。</span><a href="archive.html">查看全部历史期数 →</a></div>
+
+  <section class="summary">
+    <div class="label">今 日 速 览</div>
+    <p>隔夜美联储纪要放鹰，美股涨跌不一、油价与黄金大幅下挫；券商聚焦存算一体与半导体，AI 模型密集发布；APEC 深圳会议收官在即，中俄美元首会晤今日登场，神舟二十四号进入发射倒计时。</p>
+    <div style="margin-top:10px;font-size:11.5px;color:var(--ink-3)">关键词 · 美股 · 芯片股 · 英伟达 · 美联储 · 加息 · 会议纪要</div>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-panel="morning" role="tab">早报<span class="num">11</span></button>
+    <button class="tab" data-panel="evening" role="tab">晚报<span class="num">0</span></button>
+    <button class="tab" data-panel="qa" role="tab">热点问答<span class="num">3</span></button>
+  </div>
+
+  <section class="panel active" id="panel-morning">
+    <div class="sec-intro"><span class="big">早报</span><span class="sub">一觉醒来，先看清这些</span><span class="rule"></span></div>
+    
+    <article class="news">
+      <div class="idx">01</div>
+      <div>
+        <span class="cat cat-财经">财经</span>
+        <h3>隔夜美股三大指数涨跌不一，芯片股显著分化</h3>
+        <p>道指跌 1.11% 报 50198.17 点，标普 500 跌 0.23% 报 7323.63 点，纳指涨 0.42% 报 24429.88 点。英伟达高开低走收跌近 3%，高通跌超 4%；AMD 涨超 5%、博通涨逾 3%。亚马逊涨超 3%，中概股多数下跌，小马智行跌超 7%。</p>
+        <div class="foot"><span class="src">来源 · 券商中国 / 陆家嘴财经早餐</span><span class="tag">美股</span><span class="tag">芯片股</span><span class="tag">英伟达</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">02</div>
+      <div>
+        <span class="cat cat-财经">财经</span>
+        <h3>美联储 10 月会议纪要放鹰，12 月加息预期升温</h3>
+        <p>北京时间 19 日凌晨披露的纪要显示，几乎所有官员认为未来数月可能需进一步加息，部分官员称若通胀数据不利，12 月加息超过 25 个基点或合理。理事沃勒称若不释放 1 月加息信号，应在 12 月加息 50 个基点；市场对 12 月加息 25 个基点定价接近确定。</p>
+        <div class="foot"><span class="src">来源 · 财联社 / 券商中国</span><span class="tag">美联储</span><span class="tag">加息</span><span class="tag">会议纪要</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">03</div>
+      <div>
+        <span class="cat cat-财经">财经</span>
+        <h3>国际油价与贵金属大幅下挫，现货黄金创逾一年新低</h3>
+        <p>WTI 12 月原油合约跌 3.20% 报 83.26 美元/桶，为 8 月底以来首次跌破 85 美元；布伦特 1 月合约跌 1.28% 报 91.95 美元。现货黄金跌约 3.23% 报 3724 美元/盎司附近，为 2025 年 9 月以来最低；COMEX 白银期货跌逾 5%。美元指数涨约 0.3% 报 103.8。</p>
+        <div class="foot"><span class="src">来源 · 财联社 / 金十数据</span><span class="tag">原油</span><span class="tag">黄金</span><span class="tag">贵金属</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">04</div>
+      <div>
+        <span class="cat cat-财经">财经</span>
+        <h3>券商晨会聚焦存算一体与推理基础设施，半导体维持高增长</h3>
+        <p>华泰证券指出端侧存算一体、推理芯片、生成式视频算力等领域均获 10 亿元以上融资案例。中信建投数据显示 2026 年前三季度电子板块营收、归母净利分别同比增长 41%、186%，Q3 单季半导体归母净利增速达 516%，国产化有望加速。</p>
+        <div class="foot"><span class="src">来源 · 财联社</span><span class="tag">存算一体</span><span class="tag">半导体</span><span class="tag">券商晨会</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">05</div>
+      <div>
+        <span class="cat cat-科技">科技</span>
+        <h3>腾讯三季度资本开支 814.3 亿元，AI 与云业务提速</h3>
+        <p>腾讯 Q3 营收 2073 亿元、同比增 8%，资本开支 814.3 亿元大超预期，云收入增 35%、研发开支增 42%。同日微软在 Ignite 大会发布 MAI Cyber 2 Flash 安全大模型，厂商口径称漏洞发现率 92.3%、成本不足竞品 2%。</p>
+        <div class="foot"><span class="src">来源 · 九天技术 AI 要闻速递</span><span class="tag">腾讯</span><span class="tag">资本开支</span><span class="tag">微软</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">06</div>
+      <div>
+        <span class="cat cat-科技">科技</span>
+        <h3>AI 模型密集发布：Gemini 4 Neon、GPT-6.2 Astra 相继亮相</h3>
+        <p>谷歌发布 Gemini 4 Neon，主打复杂编程与知识工作，厂商引用基准称其智能指数列第三、编程智能体指数第一，定价每百万输入 token 3 美元、输出 15 美元，支持百万上下文。OpenAI 同期推出 GPT-6.2 Astra 与更便宜的 Sol，前者厂商口径称多步骤测试较前代提升 5.2 分。</p>
+        <div class="foot"><span class="src">来源 · AI Breaking Wire / 今日头条 AI 日报</span><span class="tag">Gemini</span><span class="tag">OpenAI</span><span class="tag">大模型</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">07</div>
+      <div>
+        <span class="cat cat-科技">科技</span>
+        <h3>腾讯混元开源 Hy4 flash，首日 token 调用破 50 万亿</h3>
+        <p>Hy4 flash 发布标准、FP8、Base 三个版本，总参数 224B、激活仅 12B，支持多模态与百万上下文；官方称任务成本较基准降 18 倍，首日 token 调用突破 50 万亿、登顶 OpenRouter 日榜。SuperCLUE 新榜中 Qwen4-Max、Kimi K3.1 Pro、混元 Hy4 以 1 分内差距并列国内第一。</p>
+        <div class="foot"><span class="src">来源 · 今日头条 AI 日报</span><span class="tag">腾讯混元</span><span class="tag">开源</span><span class="tag">SuperCLUE</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">08</div>
+      <div>
+        <span class="cat cat-科技">科技</span>
+        <h3>宇树科技打新中签率 0.0181%，机器人产业链迎估值锚</h3>
+        <p>宇树科技 11 月 17 日启动申购，打新中签率为 0.0181%，机器人产业链由此迎来一个公开估值锚点。同期王兴兴预判家用机器人临近突破，认为规模化落地的临界点正在接近；香港加速布局具身智能赛道，政产学研协同推进。</p>
+        <div class="foot"><span class="src">来源 · 九天技术 AI 要闻速递</span><span class="tag">宇树科技</span><span class="tag">具身智能</span><span class="tag">打新</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">09</div>
+      <div>
+        <span class="cat cat-时政">时政</span>
+        <h3>习近平迎接特朗普抵深，今日举行中俄美元首会晤</h3>
+        <p>11 月 18 日习近平在深圳宝安国际机场迎接来华出席 APEC 第三十三次领导人非正式会议的特朗普，这是两国元首今年第三次会晤。据外交部，19 日习近平将同普京、特朗普在深圳举行中俄美元首会晤，为三国领导人首次面对面会晤。</p>
+        <div class="foot"><span class="src">来源 · 中国日报 / 外交部</span><span class="tag">APEC</span><span class="tag">中俄美元首会晤</span><span class="tag">深圳</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">10</div>
+      <div>
+        <span class="cat cat-民生">民生</span>
+        <h3>中央气象台解除寒潮蓝色预警，大风预警持续</h3>
+        <p>19 日 06 时中央气象台解除寒潮蓝色预警，因较强冷空气影响趋于结束；但 19 日 08 时至 20 日 08 时黑龙江中西部、吉林中东部等地仍降温 4 至 6℃、局部可达 8℃，20 日早晨 0℃ 线南压至河南北部至苏皖北部一带。大风蓝色预警继续，内蒙古、京津冀、山东半岛等地阵风 7 至 9 级。</p>
+        <div class="foot"><span class="src">来源 · 中央气象台</span><span class="tag">寒潮</span><span class="tag">大风</span><span class="tag">天气</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">11</div>
+      <div>
+        <span class="cat cat-航天">航天</span>
+        <h3>神舟二十四号进入发射前关键阶段，将首次中外航天员联合飞行</h3>
+        <p>神舟二十四号载人飞船与长征二号 F 遥二十四火箭组合体 17 日垂直转运至酒泉发射区，计划近日择机发射。巴基斯坦航天员将以载荷专家身份参加任务，为中国载人航天史上首次中外航天员联合飞行、空间站首次迎来外籍航天员；发射场为约 1℃ 低温为火箭穿上白色保温层。</p>
+        <div class="foot"><span class="src">来源 · 央视新闻 / 新华社</span><span class="tag">神舟二十四号</span><span class="tag">航天</span><span class="tag">载荷专家</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel" id="panel-evening">
+    <div class="sec-intro"><span class="big">晚报</span><span class="sub">这一天，后来又发生了什么</span><span class="rule"></span></div>
+    <div class="empty">这一栏暂无内容</div>
+  </section>
+
+  <section class="panel" id="panel-qa">
+    <div class="qa-wrap"><h2>问一问今天的热点</h2><div class="qa-tip">以下问答根据当日收录的热点内容整理。</div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q1</span>隔夜美股和外围市场表现如何？</div>
+      <div class="qa-a"><span class="an">A</span><div>美股三大指数收盘涨跌不一：道指跌 1.11% 报 50198.17 点，标普 500 跌 0.23%，纳指涨 0.42%。芯片股分化明显，英伟达跌近 3%、AMD 涨超 5%；欧洲三大股指全线下跌。美联储 10 月会议纪要偏鹰，油价与黄金大跌，WTI 原油跌 3.20% 报 83.26 美元/桶，现货黄金跌约 3.23% 至 3724 美元/盎司附近，为 2025 年 9 月以来最低。</div></div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q2</span>今天财经和科技领域有哪些值得关注的进展？</div>
+      <div class="qa-a"><span class="an">A</span><div>券商晨会聚焦存算一体与推理基础设施，中信建投称 2026 年前三季度电子板块营收、归母净利分别同比增长 41%、186%；腾讯三季度营收 2073 亿元、资本开支 814.3 亿元；腾讯混元开源 Hy4 flash，首日 token 调用破 50 万亿；宇树科技打新中签率 0.0181%，为机器人产业链提供公开估值锚点。</div></div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q3</span>今天有哪些民生和航天方面的新消息？</div>
+      <div class="qa-a"><span class="an">A</span><div>中央气象台 19 日 06 时解除寒潮蓝色预警，但黑龙江、吉林等地 19 日仍有 4 至 6℃ 降温，20 日早晨 0℃ 线南压至河南北部至苏皖北部，大风蓝色预警持续。航天方面，神舟二十四号船箭组合体已转运至发射区、进入发射前关键阶段，巴基斯坦航天员将以载荷专家身份参加，是中国载人航天首次中外航天员联合飞行。</div></div>
+    </div></div>
+  </section>
+
+  <footer>
+    <div class="row"><span>热点早晚报 · 内容摘编自公开媒体报道，仅作资讯聚合</span><span>2026 年 11 月 19 日</span></div>
+    <div class="row"><span>早报 / 晚报每日自动更新 · 问答基于当日收录内容归纳</span><span><a href="archive.html">历史目录</a> · 如有出入，以官方发布为准</span></div>
+  </footer>
+</div>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var panels=[].slice.call(document.querySelectorAll('.panel'));
+  function show(name){
+    tabs.forEach(function(t){t.classList.toggle('active',t.getAttribute('data-panel')===name);});
+    panels.forEach(function(p){p.classList.toggle('active',p.id==='panel-'+name);});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-panel'));});});
+  var h=(location.hash||'').replace('#','');
+  if(h==='morning'||h==='evening'||h==='qa') show(h);
+})();
+</script>
+</body>
+</html>
