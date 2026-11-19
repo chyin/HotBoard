@@ -1,5 +1,5 @@
 {
-  "enabled": false,
+  "enabled": true,
   "remote": "origin",
   "branch": "main",
   "commitPrefix": "auto",
