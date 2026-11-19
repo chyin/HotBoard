@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "remote": "origin",
+  "branch": "main",
+  "commitPrefix": "auto",
+  "retries": 3,
+  "_note": "enabled 改为 true 后，每次 node build.cjs 构建完成会自动 commit + push。remote 填 git remote 名称（默认 origin），branch 填 Pages 发布分支。首次配置完成前请保持 false。"
+}

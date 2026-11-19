@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>热点早晚报 · 每天早晚，快速看清重要的事</title>
+<meta name="description" content="每天早晚上新，帮你把当天最值得看的财经、科技、民生热点快速过一遍，并支持热点智能问答。">
+<style>
+  :root{
+    --paper:#f7f5f0;--surface:#ffffff;--ink:#1c1b19;--ink-2:#5c584f;--ink-3:#928d82;
+    --line:#e8e3d9;--accent:#b23a2e;--accent-soft:#fbece9;--gold:#a8812c;--gold-soft:#f7f0dd;
+    --blue:#2f5d8a;--blue-soft:#e9f0f7;--green:#2f6b4f;--green-soft:#e7f2ec;
+    --purple:#6b4a8c;--purple-soft:#f0eaf7;--shadow:0 1px 2px rgba(30,25,15,.04),0 8px 24px rgba(30,25,15,.05);
+    --serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",STSong,SimSun,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+  /* masthead */
+  header.masthead{padding:38px 0 0}
+  .topline{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--ink-3);letter-spacing:.08em;border-top:3px double var(--ink);padding-top:10px}
+  .brand{text-align:center;padding:18px 0 14px;border-bottom:1px solid var(--ink)}
+  .brand h1{font-family:var(--serif);font-size:52px;letter-spacing:.18em;font-weight:700;line-height:1.1;color:var(--ink)}
+  .brand .en{font-size:11px;letter-spacing:.42em;color:var(--accent);margin-top:8px;text-transform:uppercase}
+  .brand .tagline{font-size:13px;color:var(--ink-2);margin-top:12px;letter-spacing:.04em}
+  .metaline{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--ink-3);padding:10px 0;border-bottom:1px solid var(--line)}
+  .live{display:inline-flex;align-items:center;gap:6px}
+  .live i{width:7px;height:7px;border-radius:50%;background:#3a9e63;display:inline-block;box-shadow:0 0 0 3px rgba(58,158,99,.14)}
+
+  /* date nav */
+  .datenav{padding:22px 0 6px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .datechip{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink)}
+  .datechip small{font-family:var(--sans);font-size:12px;color:var(--ink-3);font-weight:400;margin-left:8px}
+  .colophon{margin-left:auto;font-size:12px;color:var(--ink-3)}
+
+  /* summary */
+  .summary{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:4px;padding:18px 20px;margin:14px 0 22px;box-shadow:var(--shadow)}
+  .summary .label{font-size:11px;letter-spacing:.2em;color:var(--accent);font-weight:600}
+  .summary p{font-family:var(--serif);font-size:16px;line-height:1.85;margin-top:6px;color:var(--ink)}
+
+  /* tabs */
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:26px}
+  .tab{appearance:none;background:none;border:none;border-bottom:2px solid transparent;padding:11px 20px;font-size:15px;font-family:var(--sans);color:var(--ink-2);cursor:pointer;transition:.18s;display:flex;align-items:center;gap:8px}
+  .tab:hover{color:var(--ink)}
+  .tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+  .tab .num{font-size:11px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:0 7px;color:var(--ink-3)}
+
+  .panel{display:none;animation:fade .35s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  /* section intro */
+  .sec-intro{display:flex;align-items:baseline;gap:14px;margin:4px 0 18px}
+  .sec-intro .big{font-family:var(--serif);font-size:26px;font-weight:700}
+  .sec-intro .sub{font-size:12px;color:var(--ink-3)}
+  .sec-intro .rule{flex:1;height:1px;background:var(--line)}
+
+  /* news list */
+  .news-list{display:grid;gap:0}
+  .news{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:20px 8px;border-bottom:1px solid var(--line);transition:.18s}
+  .news:hover{background:rgba(255,255,255,.6)}
+  .news .idx{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--line);line-height:1;user-select:none}
+  .news:hover .idx{color:var(--accent-soft)}
+  .news .cat{display:inline-block;font-size:11px;letter-spacing:.05em;padding:2px 9px;border-radius:3px;font-weight:600;vertical-align:middle}
+  .cat-财经{background:var(--gold-soft);color:var(--gold)}
+  .cat-科技{background:var(--blue-soft);color:var(--blue)}
+  .cat-民生{background:var(--green-soft);color:var(--green)}
+  .cat-体育{background:var(--purple-soft);color:var(--purple)}
+  .cat-娱乐{background:var(--accent-soft);color:var(--accent)}
+  .cat-航天{background:var(--green-soft);color:var(--green)}
+  .cat-时政{background:var(--accent-soft);color:var(--accent)}
+  .news h3{font-family:var(--serif);font-size:19px;line-height:1.5;font-weight:700;margin:8px 0 6px;color:var(--ink)}
+  .news p{font-size:14px;color:var(--ink-2);line-height:1.8}
+  .news .foot{margin-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-3)}
+  .news .foot .src{color:var(--ink-3)}
+  .news .foot .tag{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:1px 9px}
+  .news .foot .sep{color:var(--line)}
+
+  /* QA */
+  .qa-wrap{display:grid;grid-template-columns:1fr;gap:18px}
+  .qa-note{font-size:12px;color:var(--ink-3);background:var(--gold-soft);border:1px solid #efe4c6;border-radius:6px;padding:12px 14px;line-height:1.7}
+  .qa-box{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+  .qa-head{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+  .qa-head .dot{width:9px;height:9px;border-radius:50%;background:var(--accent)}
+  .qa-head h3{font-size:15px;font-weight:600}
+  .qa-head .badge{margin-left:auto;font-size:11px;color:var(--ink-3)}
+  .qa-body{padding:18px 20px;max-height:520px;overflow:auto}
+  .msg{margin-bottom:18px;display:flex;gap:10px}
+  .msg .avatar{flex:0 0 30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600}
+  .msg.q .avatar{background:var(--paper);border:1px solid var(--line);color:var(--ink-2)}
+  .msg.a .avatar{background:var(--accent);color:#fff}
+  .msg .bubble{flex:1;padding:10px 14px;border-radius:8px;font-size:14px;line-height:1.8}
+  .msg.q .bubble{background:var(--paper);color:var(--ink)}
+  .msg.a .bubble{background:var(--surface);border:1px solid var(--line);color:var(--ink-2)}
+  .msg.a .bubble strong{color:var(--ink)}
+  .suggest{display:flex;flex-wrap:wrap;gap:8px;padding:0 20px 16px}
+  .suggest button{font-family:var(--sans);font-size:12.5px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:6px 13px;color:var(--ink-2);cursor:pointer;transition:.15s}
+  .suggest button:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+  .qa-input{display:flex;gap:10px;padding:14px 20px;border-top:1px solid var(--line);background:#fcfbf8}
+  .qa-input input{flex:1;font-family:var(--sans);font-size:14px;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);outline:none}
+  .qa-input input:focus{border-color:var(--accent)}
+  .qa-input button{font-family:var(--sans);font-size:14px;font-weight:600;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:0 22px;cursor:pointer;transition:.15s}
+  .qa-input button:hover{background:#962f24}
+  .qa-input button:disabled{opacity:.5;cursor:wait}
+  .typing{color:var(--ink-3);font-size:13px}
+  .typing span{animation:blink 1s infinite}
+  @keyframes blink{50%{opacity:.25}}
+
+  /* QA knowledge/source list */
+  .qa-sources{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:12px;color:var(--ink-3)}
+  .qa-sources b{color:var(--ink-2);font-weight:600}
+
+  footer{margin-top:60px;padding:26px 0 44px;border-top:3px double var(--ink);font-size:12px;color:var(--ink-3);line-height:1.9}
+  footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  .empty{text-align:center;color:var(--ink-3);padding:60px 0;font-family:var(--serif)}
+
+  @media(max-width:640px){
+    .brand h1{font-size:36px}
+    .news{grid-template-columns:26px 1fr;gap:10px;padding:16px 2px}
+    .news .idx{font-size:22px}
+    .news h3{font-size:17px}
+    .tab{padding:10px 12px;font-size:14px}
+    .qa-input{padding:12px}
+    .qa-head,.qa-body{padding-left:14px;padding-right:14px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="topline"><span>每日热点 · 早晚上新</span><span id="issueNo">第 001 期</span></div>
+    <div class="brand">
+      <h1>热点早晚报</h1>
+      <div class="en">Morning &amp; Evening Brief</div>
+      <div class="tagline" id="tagline">每天早晚，帮你把当天最值得看的事快速过一遍</div>
+    </div>
+    <div class="metaline">
+      <span class="live"><i></i> 持续更新中</span>
+      <span id="updateTime">最近更新：—</span>
+      <span id="dayCount">已收录 1 天</span>
+    </div>
+  </header>
+
+  <nav class="datenav">
+    <div class="datechip" id="dateTitle">—<small id="weekday"></small></div>
+    <div class="colophon">今日关键词 · <span id="keywords">—</span></div>
+  </nav>
+
+  <section class="summary">
+    <div class="label">今 日 速 览</div>
+    <p id="summaryText">正在载入今日概览…</p>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-panel="morning" role="tab">早报<span class="num" id="morningNum">0</span></button>
+    <button class="tab" data-panel="evening" role="tab">晚报<span class="num" id="eveningNum">0</span></button>
+    <button class="tab" data-panel="qa" role="tab">热点问答<span class="num">AI</span></button>
+  </div>
+
+  <section class="panel active" id="panel-morning">
+    <div class="sec-intro"><span class="big">早报</span><span class="sub">一觉醒来，先看清这些</span><span class="rule"></span></div>
+    <div class="news-list" id="morningList"></div>
+  </section>
+
+  <section class="panel" id="panel-evening">
+    <div class="sec-intro"><span class="big">晚报</span><span class="sub">这一天，后来又发生了什么</span><span class="rule"></span></div>
+    <div class="news-list" id="eveningList"></div>
+  </section>
+
+  <section class="panel" id="panel-qa">
+    <div class="qa-wrap">
+      <div class="qa-note" id="qaNote">智能问答基于当日收录的热点内容作答。当前为本地知识检索模式：回答从当天热点中归纳生成，并附上参考条目；开通云服务后可升级为真正的大模型实时问答。</div>
+      <div class="qa-box">
+        <div class="qa-head"><span class="dot"></span><h3>问一问今天的热点</h3><span class="badge" id="qaBadge">已收录当日内容</span></div>
+        <div class="qa-body" id="qaBody">
+          <div class="msg a"><div class="avatar">早</div><div class="bubble">你好，我是 <strong>热点早晚报</strong> 的小助手。你可以问我今天的新闻，比如「今天 A 股怎么样」「有什么民生提醒」。试试下面的问题，或直接输入你想问的。</div></div>
+        </div>
+        <div class="suggest" id="suggest"></div>
+        <form class="qa-input" id="qaForm">
+          <input type="text" id="qaInput" placeholder="输入你想了解的问题…" autocomplete="off">
+          <button type="submit" id="qaSend">提问</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="row"><span>热点早晚报 · 内容摘编自公开媒体报道，仅作资讯聚合</span><span id="footerDate">—</span></div>
+    <div class="row"><span>早报 / 晚报每日自动更新 · 问答基于当日收录内容归纳</span><span>如有出入，以官方发布为准</span></div>
+  </footer>
+</div>
+
+<script src="data/hotspots.js"></script>
+<script>
+(function(){
+  'use strict';
+  var DATA = window.HOTSPOTS_DATA;
+  var day = DATA && DATA.days && DATA.days[0];
+  if(!day){ document.getElementById('summaryText').textContent='暂无热点数据，请稍后再来。'; return; }
+
+  function $(id){return document.getElementById(id);}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+  function formatDate(d){
+    var p=d.split('-'); return p[0]+' 年 '+(+p[1])+' 月 '+(+p[2])+' 日';
+  }
+  function formatTime(t){
+    if(!t) return '—';
+    var d=new Date(t); if(isNaN(d)) return t;
+    var p2=function(n){return n<10?'0'+n:''+n;};
+    return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate())+' '+p2(d.getHours())+':'+p2(d.getMinutes());
+  }
+
+  $('tagline').textContent = DATA.site.tagline || $('tagline').textContent;
+  $('updateTime').textContent = '最近更新：'+formatTime(DATA.site.updatedAt);
+  $('dayCount').textContent = '已收录 '+DATA.days.length+' 天';
+  $('issueNo').textContent = '第 '+String(DATA.days.length).padStart(3,'0')+' 期';
+  $('dateTitle').firstChild.nodeValue = formatDate(day.date)+' ';
+  $('weekday').textContent = day.weekday || '';
+  $('summaryText').textContent = day.summary || '';
+  $('footerDate').textContent = formatDate(day.date);
+
+  var allTags=[];
+  (day.morning||[]).concat(day.evening||[]).forEach(function(n){(n.tags||[]).forEach(function(t){if(allTags.indexOf(t)<0)allTags.push(t);});});
+  $('keywords').textContent = allTags.slice(0,6).join(' · ');
+
+  function renderList(id, list){
+    var box=$(id); box.innerHTML='';
+    if(!list||!list.length){box.innerHTML='<div class="empty">今天这一栏暂无内容</div>';return 0;}
+    list.forEach(function(n,i){
+      var el=document.createElement('article'); el.className='news';
+      var tags=(n.tags||[]).map(function(t){return '<span class="tag">'+esc(t)+'</span>';}).join('');
+      el.innerHTML=
+        '<div class="idx">'+String(i+1).padStart(2,'0')+'</div>'+
+        '<div>'+
+          '<span class="cat cat-'+esc(n.category)+'">'+esc(n.category)+'</span>'+
+          '<h3>'+esc(n.title)+'</h3>'+
+          '<p>'+esc(n.desc)+'</p>'+
+          '<div class="foot"><span class="src">来源 · '+esc(n.source)+'</span><span class="sep">|</span>'+tags+'</div>'+
+        '</div>';
+      box.appendChild(el);
+    });
+    return list.length;
+  }
+  var mc=renderList('morningList',day.morning), ec=renderList('eveningList',day.evening);
+  $('morningNum').textContent=mc; $('eveningNum').textContent=ec;
+
+  // tabs
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.classList.remove('active');});
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+    t.classList.add('active');
+    $('panel-'+t.dataset.panel).classList.add('active');
+  });});
+
+  // QA
+  var ALL=(day.morning||[]).concat(day.evening||[]);
+  var QA=day.qa||[];
+  var qaBody=$('qaBody'), qaSuggest=$('suggest');
+  QA.forEach(function(item){
+    var b=document.createElement('button'); b.type='button'; b.textContent=item.q;
+    b.addEventListener('click',function(){ask(item.q,item.a,true);});
+    qaSuggest.appendChild(b);
+  });
+
+  function appendMsg(role,html){
+    var m=document.createElement('div'); m.className='msg '+role;
+    var av=document.createElement('div'); av.className='avatar'; av.textContent= role==='q'?'我':'早';
+    var bub=document.createElement('div'); bub.className='bubble'; bub.innerHTML=html;
+    m.appendChild(av); m.appendChild(bub); qaBody.appendChild(m);
+    qaBody.scrollTop=qaBody.scrollHeight;
+    return bub;
+  }
+
+  function tokenize(q){
+    var clean=q.replace(/[，。？！、,.?!\s?的都是了吗呢啊有什么怎么多少情况现在今天]/g,'');
+    var toks=[];
+    if(/[一-龥]/.test(clean)){
+      if(clean.length<=2) toks.push(clean);
+      for(var i=0;i<clean.length-1;i++) toks.push(clean.slice(i,i+2));
+    } else { toks=clean.toLowerCase().split(/\s+/).filter(Boolean); }
+    return toks;
+  }
+  function score(text,q){
+    var toks=tokenize(q), s=0; text=text||'';
+    toks.forEach(function(t){ if(text.indexOf(t)>=0) s+=t.length; });
+    return s;
+  }
+  function localAnswer(q){
+    var ranked=ALL.map(function(n){
+      var text=(n.title+' '+n.desc+' '+(n.tags||[]).join(' '));
+      return {n:n,s:score(text,q)};
+    }).filter(function(x){return x.s>0;}).sort(function(a,b){return b.s-a.s;}).slice(0,3);
+    if(!ranked.length){
+      return {html:'当日热点里还没找到和「'+esc(q)+'」直接相关的内容。你可以换个说法，或点上面的推荐问题试试。',src:[]};
+    }
+    var parts=ranked.map(function(x,i){
+      return '<strong>'+(i+1)+'. '+esc(x.n.title)+'</strong><br>'+esc(x.n.desc);
+    }).join('<br><br>');
+    var intro='根据今天的收录内容，和「'+esc(q)+'」最相关的是这几条：<br><br>';
+    return {html:intro+parts,src:ranked.map(function(x){return x.n.source;})};
+  }
+
+  function ask(question,preset,fromSuggest){
+    if(fromSuggest){ /* preset button already carries answer */ }
+    appendMsg('q',esc(question));
+    var bub=appendMsg('a','<span class="typing">正在检索今日热点<span>…</span></span>');
+    var send=$('qaSend'); send.disabled=true;
+    setTimeout(function(){
+      var res = preset!=null ? {html:preset,src:[]} : localAnswer(question);
+      var extra = res.src.length ? '<div class="qa-sources"><b>参考来源：</b>'+esc(res.src.join(' / '))+'</div>' : '';
+      bub.innerHTML=res.html+extra;
+      send.disabled=false;
+      qaBody.scrollTop=qaBody.scrollHeight;
+    }, 380);
+  }
+
+  $('qaForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=$('qaInput').value.trim(); if(!v) return;
+    $('qaInput').value=''; ask(v,null,false);
+  });
+})();
+</script>
+</body>
+</html>
