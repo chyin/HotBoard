@@ -156,7 +156,7 @@ const TAB_JS = `
   }
   tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-panel'));});});
   var h=(location.hash||'').replace('#','');
-  if(h==='morning'||h==='evening'||h==='qa') show(h);
+  if(h==='morning'||h==='evening'||h==='qa'||h==='verify') show(h);
 })();
 `;
 
@@ -187,7 +187,6 @@ function extraList(title, arr) {
 }
 function qaList(qa) {
   if (!qa || !qa.length) return '<div class="empty">这一栏暂无内容</div>';
-  if (!qa || !qa.length) return '';
   return `<div class="qa-wrap"><h2>热点问答</h2><div class="qa-tip">以下问答根据当日收录的内容整理。</div>${qa.map((x, i) => `
     <div class="qa-item">
       <div class="qa-q"><span class="qn">Q${i + 1}</span>${esc(x.q)}</div>
@@ -254,7 +253,8 @@ function renderDayPage(d, opts) {
   <div class="tabs" role="tablist">
     <button class="tab active" data-panel="morning" role="tab">早班快讯<span class="num">${mCount}</span></button>
     <button class="tab" data-panel="evening" role="tab">晚班全景<span class="num">${eCount}</span></button>
-    <button class="tab" data-panel="qa" role="tab">核实与跟踪<span class="num">${((d.verify || []).length + (d.watch || []).length + qCount)}</span></button>
+    <button class="tab" data-panel="qa" role="tab">热点问答<span class="num">${qCount}</span></button>
+    <button class="tab" data-panel="verify" role="tab">核实与跟踪<span class="num">${((d.verify || []).length + (d.watch || []).length)}</span></button>
   </div>
 
   <section class="panel active" id="panel-morning">
@@ -269,6 +269,9 @@ function renderDayPage(d, opts) {
 
   <section class="panel" id="panel-qa">
     ${qaList(d.qa)}
+  </section>
+
+  <section class="panel" id="panel-verify">
     ${extraList('待核实区（单一来源 / 口径未明）', d.verify)}
     ${extraList('明日关注', d.watch)}
   </section>
@@ -295,7 +298,7 @@ function renderArchive() {
       <div class="arch-meta">
         <span>早班 ${x.morningCount} 条</span><span>晚班 ${x.eveningCount} 条</span><span>问答 ${x.qaCount} 条</span>
         <span class="arch-links">
-          ${exists ? `<a href="${f}#morning">早班</a><a href="${f}#evening">晚班</a><a href="${f}#qa">核实跟踪</a><a href="${f}">整期</a>` : '<span>页面生成中</span>'}
+          ${exists ? `<a href="${f}#morning">早班</a><a href="${f}#evening">晚班</a><a href="${f}#qa">问答</a><a href="${f}#verify">核实跟踪</a><a href="${f}">整期</a>` : '<span>页面生成中</span>'}
         </span>
       </div>
     </article>`;

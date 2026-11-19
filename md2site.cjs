@@ -159,6 +159,24 @@ function parseBrief(file, kind) {
   return { date, mainline, items, verify, watch, kind };
 }
 
+/* ---------- 基于当日收录内容生成 AI 问答（供网页问答模板展示） ---------- */
+function buildQA(day) {
+  const pool = (day.morning || []).concat(day.evening || []);
+  if (!pool.length) return [];
+  // 取当天最重要的前 3 条，问法轮换，避免三条措辞雷同
+  const askers = [
+    t => `${t}，这件事具体是怎么回事？`,
+    t => `${t}，值得关注的原因是什么？`,
+    t => `今天具身智能领域，${t}释放了什么信号？`
+  ];
+  return pool.slice(0, 3).map((it, i) => {
+    const title = String(it.title || '').replace(/[。.！!？?]+$/, '').trim();
+    let a = String(it.desc || '').trim();
+    if (it.sources && it.sources.length) a += `（来源：${it.sources.map(s => s.name).join('、')}）`;
+    return { q: askers[i % askers.length](title), a };
+  });
+}
+
 /* ---------- 主流程 ---------- */
 function main() {
   if (!fs.existsSync(SRC_DIR)) { console.error('源目录不存在:', SRC_DIR); process.exit(1); }
@@ -189,7 +207,11 @@ function main() {
   const days = Array.from(byDate.values())
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, 7)
-    .map(d => Object.assign({ weekday: weekdayOf(d.date), qa: [] }, d));
+    .map(d => {
+      const day = Object.assign({ weekday: weekdayOf(d.date), verify: [], watch: [] }, d);
+      day.qa = buildQA(day);
+      return day;
+    });
 
   const now = new Date();
   const p = n => String(n).padStart(2, '0');

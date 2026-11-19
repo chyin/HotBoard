@@ -100,7 +100,7 @@ footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
     </div>
     <div class="metaline">
       <span class="live"><i></i>每日更新</span>
-      <span>最近更新：2026-11-19 10:39</span>
+      <span>最近更新：2026-11-19 12:19</span>
       <span>已收录 3 天</span>
       <span class="navlinks"><a href="index.html">首页</a><a href="archive.html">目录</a></span>
     </div>
@@ -126,7 +126,8 @@ footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   <div class="tabs" role="tablist">
     <button class="tab active" data-panel="morning" role="tab">早班快讯<span class="num">12</span></button>
     <button class="tab" data-panel="evening" role="tab">晚班全景<span class="num">20</span></button>
-    <button class="tab" data-panel="qa" role="tab">核实与跟踪<span class="num">9</span></button>
+    <button class="tab" data-panel="qa" role="tab">热点问答<span class="num">3</span></button>
+    <button class="tab" data-panel="verify" role="tab">核实与跟踪<span class="num">9</span></button>
   </div>
 
   <section class="panel active" id="panel-morning">
@@ -460,7 +461,22 @@ footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   </section>
 
   <section class="panel" id="panel-qa">
-    <div class="empty">这一栏暂无内容</div>
+    <div class="qa-wrap"><h2>热点问答</h2><div class="qa-tip">以下问答根据当日收录的内容整理。</div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q1</span>华为云发布并开源昇腾原生具身世界模型 CloudRobo-WM1.2，这件事具体是怎么回事？</div>
+      <div class="qa-a"><span class="an">A</span><div>11-16 14:00 发布，主打预测增强的世界表征与原生动作生成，官方援引 RoboTwin 2.0、LiberoPro 2.0 榜单第一。 【关注点】国产算力与具身世界模型首次原生咬合，是&quot;模型+芯片+场景&quot;闭环的关键落子。榜单成绩为厂商口径。</div></div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q2</span>OpenAI 撤销独立机器人团队，人员并入核心研究体系，值得关注的原因是什么？</div>
+      <div class="qa-a"><span class="an">A</span><div>据《财富》报道，机器人研究人员转入首席研究官 Mark Chen 负责的核心研究体系，应用与硬件团队转入 Greg Brockman 负责的应用组织。官方称机器人仍是长期核心方向，调整是为加快进展。 【关注点】通用大模型路线与专用机器人团队的分工再平衡，行业需观察 GPT 系列是否直接承担高层任务规划。</div></div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q3</span>今天具身智能领域，曦选创智（无锡）完成 5 亿元天使轮，投后估值 40 亿元释放了什么信号？</div>
+      <div class="qa-a"><span class="an">A</span><div>定位机器人端侧&quot;大小脑一体&quot;SoC，首颗自研芯片计划 2028 年推出，目前仍处研发阶段、无量产产品。 【关注点】端侧芯片成为具身赛道新热点，但&quot;计划 2028 推出&quot;属企业规划，不可当成果。</div></div>
+    </div></div>
+  </section>
+
+  <section class="panel" id="panel-verify">
     <div class="extra-box"><h4>待核实区（单一来源 / 口径未明）</h4><ol><li>**曦选创智 5 亿元天使轮/40 亿估值**：仅见媒体转述，未找到工商或官方通稿，融资金额与估值待确认。</li><li>**优必选&quot;累计订单破 8 亿元&quot;**：混合了框架协议与确定订单，实际交付量未披露。</li><li>**大摩 5 万台/高盛 5 万台以上/特斯拉 1.5—3.5 万台**：均为机构预测口径，非已实现出货。</li><li>**银河通用&quot;超千台商业部署&quot;、长隆&quot;互动超百万次&quot;**：企业/园方自述，缺第三方审计。</li><li>**CloudRobo-WM1.2 榜单第一**：厂商援引，未附第三方复现数据。</li></ol></div>
     <div class="extra-box"><h4>明日关注</h4><ol><li>华为云 CloudRobo-WM1.2 是否公布真机部署指标与开源链接。</li><li>OpenAI 机器人团队调整后，是否有进一步的路线说明或人事变动。</li><li>一级市场融资降温趋势能否在 11 月完整数据中延续（当前 11 月截至 11 日仅 40.14 亿元）。</li><li>--</li></ol></div>
   </section>
@@ -480,7 +496,7 @@ footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
   }
   tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-panel'));});});
   var h=(location.hash||'').replace('#','');
-  if(h==='morning'||h==='evening'||h==='qa') show(h);
+  if(h==='morning'||h==='evening'||h==='qa'||h==='verify') show(h);
 })();
 </script>
 </body>
