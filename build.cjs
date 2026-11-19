@@ -107,7 +107,14 @@ header.masthead{padding:34px 0 0}
 .news{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:18px 8px;border-bottom:1px solid var(--line)}
 .news .idx{font-family:var(--serif);font-size:29px;font-weight:700;color:var(--line);line-height:1}
 .cat{display:inline-block;font-size:11px;letter-spacing:.05em;padding:2px 9px;border-radius:3px;font-weight:600}
-.cat-财经{background:var(--gold-soft);color:var(--gold)}.cat-科技{background:var(--blue-soft);color:var(--blue)}.cat-民生{background:var(--green-soft);color:var(--green)}.cat-体育{background:var(--purple-soft);color:var(--purple)}.cat-娱乐{background:var(--accent-soft);color:var(--accent)}.cat-航天{background:var(--green-soft);color:var(--green)}.cat-时政{background:var(--accent-soft);color:var(--accent)}
+.cat-财经,.cat-融资{background:var(--gold-soft);color:var(--gold)}.cat-科技,.cat-技术{background:var(--blue-soft);color:var(--blue)}.cat-民生,.cat-订单量产{background:var(--green-soft);color:var(--green)}.cat-体育,.cat-产品发布{background:var(--purple-soft);color:var(--purple)}.cat-娱乐,.cat-观点{background:var(--accent-soft);color:var(--accent)}.cat-航天,.cat-政策{background:var(--green-soft);color:var(--green)}.cat-时政{background:var(--accent-soft);color:var(--accent)}
+.src-links{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.src-links a{color:var(--blue);border-bottom:1px dashed var(--line);font-size:11.5px}
+.src-links a:hover{border-color:var(--blue)}
+.extra-box{background:var(--gold-soft);border:1px solid #efe4c6;border-radius:5px;padding:12px 16px;margin:16px 0;font-size:12.5px;color:#6d5820}
+.extra-box h4{font-family:var(--serif);font-size:15px;margin-bottom:6px;color:#5a4818}
+.extra-box ol,.extra-box ul{margin:4px 0 0 18px;line-height:1.8}
+.extra-box li{margin:2px 0}
 .news h3{font-family:var(--serif);font-size:19px;line-height:1.5;font-weight:700;margin:8px 0 6px}
 .news p{font-size:14px;color:var(--ink-2);line-height:1.8}
 .news .foot{margin-top:9px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-3)}
@@ -154,22 +161,34 @@ const TAB_JS = `
 `;
 
 /* ---------- 内容片段 ---------- */
+function srcBlock(n) {
+  if (n.sources && n.sources.length) {
+    return `<span class="src-links"><span class="src">来源 ·</span> ${n.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>`).join('、')}</span>`;
+  }
+  return `<span class="src">来源 · ${esc(n.source || '公开报道')}</span>`;
+}
 function newsList(list) {
-  if (!list || !list.length) return '<div class="empty">这一栏暂无内容</div>';
+  if (!list || !list.length) return '<div class="empty">这一栏暂无内容（该时段简报尚未生成）</div>';
   return list.map((n, i) => `
     <article class="news">
       <div class="idx">${String(i + 1).padStart(2, '0')}</div>
       <div>
-        <span class="cat cat-${esc(n.category)}">${esc(n.category)}</span>
+        <span class="cat cat-${esc(n.category)}">${esc(n.rawCategory || n.category)}</span>
+        ${n.time ? `<span style="font-size:11px;color:var(--ink-3);margin-left:8px">${esc(n.time)}</span>` : ''}
         <h3>${esc(n.title)}</h3>
         <p>${esc(n.desc)}</p>
-        <div class="foot"><span class="src">来源 · ${esc(n.source)}</span>${(n.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+        <div class="foot">${srcBlock(n)}${(n.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
       </div>
     </article>`).join('');
 }
+function extraList(title, arr) {
+  if (!arr || !arr.length) return '';
+  return `<div class="extra-box"><h4>${esc(title)}</h4><ol>${arr.map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>`;
+}
 function qaList(qa) {
   if (!qa || !qa.length) return '<div class="empty">这一栏暂无内容</div>';
-  return `<div class="qa-wrap"><h2>问一问今天的热点</h2><div class="qa-tip">以下问答根据当日收录的热点内容整理。</div>${qa.map((x, i) => `
+  if (!qa || !qa.length) return '';
+  return `<div class="qa-wrap"><h2>热点问答</h2><div class="qa-tip">以下问答根据当日收录的内容整理。</div>${qa.map((x, i) => `
     <div class="qa-item">
       <div class="qa-q"><span class="qn">Q${i + 1}</span>${esc(x.q)}</div>
       <div class="qa-a"><span class="an">A</span><div>${esc(x.a)}</div></div>
@@ -194,8 +213,8 @@ function renderDayPage(d, opts) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>热点早晚报 · ${esc(d.date)} · 早报/晚报</title>
-<meta name="description" content="${esc(d.date)} 热点早晚报，早报 ${mCount} 条、晚报 ${eCount} 条，快速看清当天重要的财经、科技、民生热点。">
+<title>具身热点早晚报 · ${esc(d.date)} · 早班/晚班</title>
+<meta name="description" content="${esc(d.date)} 人形机器人与具身智能简报，早班快讯 ${mCount} 条、晚班全景 ${eCount} 条，附原始新闻链接。">
 <style>${STYLE}</style>
 </head>
 <body>
@@ -224,7 +243,7 @@ function renderDayPage(d, opts) {
     </div>
   </nav>
 
-  ${isHome ? `<div class="homebar"><span>这里展示<strong>最新一期</strong>（${esc(d.date)}）的早报与晚报，与当日独立页内容一致。</span><a href="archive.html">查看全部历史期数 →</a></div>` : ''}
+  ${isHome ? `<div class="homebar"><span>这里展示<strong>最新一期</strong>（${esc(d.date)}）的早班快讯与晚班全景，与当日独立页内容一致。</span><a href="archive.html">查看全部历史期数 →</a></div>` : ''}
 
   <section class="summary">
     <div class="label">今 日 速 览</div>
@@ -233,28 +252,30 @@ function renderDayPage(d, opts) {
   </section>
 
   <div class="tabs" role="tablist">
-    <button class="tab active" data-panel="morning" role="tab">早报<span class="num">${mCount}</span></button>
-    <button class="tab" data-panel="evening" role="tab">晚报<span class="num">${eCount}</span></button>
-    <button class="tab" data-panel="qa" role="tab">热点问答<span class="num">${qCount}</span></button>
+    <button class="tab active" data-panel="morning" role="tab">早班快讯<span class="num">${mCount}</span></button>
+    <button class="tab" data-panel="evening" role="tab">晚班全景<span class="num">${eCount}</span></button>
+    <button class="tab" data-panel="qa" role="tab">核实与跟踪<span class="num">${((d.verify || []).length + (d.watch || []).length + qCount)}</span></button>
   </div>
 
   <section class="panel active" id="panel-morning">
-    <div class="sec-intro"><span class="big">早报</span><span class="sub">一觉醒来，先看清这些</span><span class="rule"></span></div>
+    <div class="sec-intro"><span class="big">早班快讯</span><span class="sub">具身智能领域，隔夜与今晨的重要动态</span><span class="rule"></span></div>
     ${newsList(d.morning)}
   </section>
 
   <section class="panel" id="panel-evening">
-    <div class="sec-intro"><span class="big">晚报</span><span class="sub">这一天，后来又发生了什么</span><span class="rule"></span></div>
+    <div class="sec-intro"><span class="big">晚班全景</span><span class="sub">当日全天新增披露与趋势观察</span><span class="rule"></span></div>
     ${newsList(d.evening)}
   </section>
 
   <section class="panel" id="panel-qa">
     ${qaList(d.qa)}
+    ${extraList('待核实区（单一来源 / 口径未明）', d.verify)}
+    ${extraList('明日关注', d.watch)}
   </section>
 
   <footer>
-    <div class="row"><span>热点早晚报 · 内容摘编自公开媒体报道，仅作资讯聚合</span><span>${fmtDate(d.date)}</span></div>
-    <div class="row"><span>早报 / 晚报每日自动更新 · 问答基于当日收录内容归纳</span><span><a href="archive.html">历史目录</a> · 如有出入，以官方发布为准</span></div>
+    <div class="row"><span>具身热点早晚报 · 内容摘编自公开媒体报道，来源可点击查看原文</span><span>${fmtDate(d.date)}</span></div>
+    <div class="row"><span>早班快讯 / 晚班全景每日自动更新 · 限定词按原文保留</span><span><a href="archive.html">历史目录</a> · 如有出入，以官方发布为准</span></div>
   </footer>
 </div>
 <script>${TAB_JS}</script>
@@ -272,9 +293,9 @@ function renderArchive() {
       <div class="arch-date"><a href="${f}">${fmtDate(x.date)}</a><small>${esc(x.weekday || '')}</small>${i === 0 ? '<span class="badge-new">最新</span>' : ''}</div>
       <div class="arch-sum">${esc(x.summary || '')}</div>
       <div class="arch-meta">
-        <span>早报 ${x.morningCount} 条</span><span>晚报 ${x.eveningCount} 条</span><span>问答 ${x.qaCount} 条</span>
+        <span>早班 ${x.morningCount} 条</span><span>晚班 ${x.eveningCount} 条</span><span>问答 ${x.qaCount} 条</span>
         <span class="arch-links">
-          ${exists ? `<a href="${f}#morning">早报</a><a href="${f}#evening">晚报</a><a href="${f}#qa">问答</a><a href="${f}">整期</a>` : '<span>页面生成中</span>'}
+          ${exists ? `<a href="${f}#morning">早班</a><a href="${f}#evening">晚班</a><a href="${f}#qa">核实跟踪</a><a href="${f}">整期</a>` : '<span>页面生成中</span>'}
         </span>
       </div>
     </article>`;
@@ -284,8 +305,8 @@ function renderArchive() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>历史目录 · 热点早晚报</title>
-<meta name="description" content="热点早晚报历史目录，按日期索引每一期的早报、晚报与热点问答，每日更新。">
+<title>历史目录 · 具身热点早晚报</title>
+<meta name="description" content="具身热点早晚报历史目录，按日期索引每一期的早班快讯、晚班全景与核实跟踪，每日更新。">
 <style>${STYLE}</style>
 </head>
 <body>
@@ -307,14 +328,14 @@ function renderArchive() {
 
   <section class="arch-head">
     <h2>历史目录</h2>
-    <p>按日期倒序索引每一期，点击进入可切换查看早报 / 晚报 / 热点问答。目录每日更新。</p>
+    <p>按日期倒序索引每一期，点击进入可切换查看早班快讯 / 晚班全景 / 核实与跟踪。目录每日更新。</p>
   </section>
 
   <div class="arch-list">${items || '<div class="empty">暂无历史期数</div>'}</div>
 
   <footer>
-    <div class="row"><span>热点早晚报 · 内容摘编自公开媒体报道，仅作资讯聚合</span><span><a href="index.html">返回首页</a></span></div>
-    <div class="row"><span>早报 / 晚报每日自动更新</span><span>如有出入，以官方发布为准</span></div>
+    <div class="row"><span>具身热点早晚报 · 内容摘编自公开媒体报道，来源可点击查看原文</span><span><a href="index.html">返回首页</a></span></div>
+    <div class="row"><span>早班快讯 / 晚班全景每日自动更新</span><span>如有出入，以官方发布为准</span></div>
   </footer>
 </div>
 </body>

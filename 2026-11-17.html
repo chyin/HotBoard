@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>具身热点早晚报 · 2026-11-17 · 早班/晚班</title>
+<meta name="description" content="2026-11-17 人形机器人与具身智能简报，早班快讯 12 条、晚班全景 20 条，附原始新闻链接。">
+<style>
+:root{--paper:#f7f5f0;--surface:#fff;--ink:#1c1b19;--ink-2:#5c584f;--ink-3:#928d82;--line:#e8e3d9;--accent:#b23a2e;--accent-soft:#fbece9;--gold:#a8812c;--gold-soft:#f7f0dd;--blue:#2f5d8a;--blue-soft:#e9f0f7;--green:#2f6b4f;--green-soft:#e7f2ec;--purple:#6b4a8c;--purple-soft:#f0eaf7;--shadow:0 1px 2px rgba(30,25,15,.04),0 8px 24px rgba(30,25,15,.05);--serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",STSong,SimSun,serif;--sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+header.masthead{padding:34px 0 0}
+.topline{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);letter-spacing:.08em;border-top:3px double var(--ink);padding-top:10px}
+.brand{text-align:center;padding:18px 0 14px;border-bottom:1px solid var(--ink)}
+.brand h1{font-family:var(--serif);font-size:50px;letter-spacing:.18em;font-weight:700;line-height:1.1}
+.brand .en{font-size:11px;letter-spacing:.42em;color:var(--accent);margin-top:8px;text-transform:uppercase}
+.brand .tagline{font-size:13px;color:var(--ink-2);margin-top:12px}
+.metaline{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--ink-3);padding:10px 0;border-bottom:1px solid var(--line)}
+.live i{width:7px;height:7px;border-radius:50%;background:#3a9e63;display:inline-block;margin-right:6px}
+.metaline .navlinks{display:flex;gap:14px;margin-left:auto}
+.metaline .navlinks a{color:var(--ink-2);border-bottom:1px solid var(--line);padding-bottom:1px}
+.metaline .navlinks a:hover{color:var(--accent);border-color:var(--accent)}
+.pagenav{padding:20px 0 4px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.datechip{font-family:var(--serif);font-size:24px;font-weight:700}
+.datechip small{font-family:var(--sans);font-size:12px;color:var(--ink-3);font-weight:400;margin-left:8px}
+.pn-right{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink-3)}
+.pn-right a{color:var(--blue);border-bottom:1px dashed var(--line)}
+.pn-right a:hover{border-color:var(--blue)}
+.pn-right .disabled{color:var(--ink-3);opacity:.5}
+.homebar{margin-top:12px;background:var(--gold-soft);border:1px solid #efe4c6;border-radius:5px;padding:10px 14px;font-size:12.5px;color:#7a6320;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.homebar a{color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent)}
+.summary{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:4px;padding:18px 20px;margin:14px 0 24px;box-shadow:var(--shadow)}
+.summary .label{font-size:11px;letter-spacing:.2em;color:var(--accent);font-weight:600}
+.summary p{font-family:var(--serif);font-size:16px;line-height:1.85;margin-top:6px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.tab{appearance:none;background:none;border:none;border-bottom:2px solid transparent;padding:11px 20px;font-size:15px;font-family:var(--sans);color:var(--ink-2);cursor:pointer;transition:.18s;display:flex;align-items:center;gap:8px}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.tab .num{font-size:11px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:0 7px;color:var(--ink-3)}
+.panel{display:none;animation:fade .3s ease}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sec-intro{display:flex;align-items:baseline;gap:14px;margin:4px 0 16px}
+.sec-intro .big{font-family:var(--serif);font-size:26px;font-weight:700}
+.sec-intro .sub{font-size:12px;color:var(--ink-3)}
+.sec-intro .rule{flex:1;height:1px;background:var(--line)}
+.news{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:18px 8px;border-bottom:1px solid var(--line)}
+.news .idx{font-family:var(--serif);font-size:29px;font-weight:700;color:var(--line);line-height:1}
+.cat{display:inline-block;font-size:11px;letter-spacing:.05em;padding:2px 9px;border-radius:3px;font-weight:600}
+.cat-财经,.cat-融资{background:var(--gold-soft);color:var(--gold)}.cat-科技,.cat-技术{background:var(--blue-soft);color:var(--blue)}.cat-民生,.cat-订单量产{background:var(--green-soft);color:var(--green)}.cat-体育,.cat-产品发布{background:var(--purple-soft);color:var(--purple)}.cat-娱乐,.cat-观点{background:var(--accent-soft);color:var(--accent)}.cat-航天,.cat-政策{background:var(--green-soft);color:var(--green)}.cat-时政{background:var(--accent-soft);color:var(--accent)}
+.src-links{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.src-links a{color:var(--blue);border-bottom:1px dashed var(--line);font-size:11.5px}
+.src-links a:hover{border-color:var(--blue)}
+.extra-box{background:var(--gold-soft);border:1px solid #efe4c6;border-radius:5px;padding:12px 16px;margin:16px 0;font-size:12.5px;color:#6d5820}
+.extra-box h4{font-family:var(--serif);font-size:15px;margin-bottom:6px;color:#5a4818}
+.extra-box ol,.extra-box ul{margin:4px 0 0 18px;line-height:1.8}
+.extra-box li{margin:2px 0}
+.news h3{font-family:var(--serif);font-size:19px;line-height:1.5;font-weight:700;margin:8px 0 6px}
+.news p{font-size:14px;color:var(--ink-2);line-height:1.8}
+.news .foot{margin-top:9px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-3)}
+.news .foot .tag{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:1px 9px}
+.qa-wrap{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:18px 22px}
+.qa-wrap h2{font-family:var(--serif);font-size:22px;margin-bottom:4px}
+.qa-tip{font-size:12px;color:var(--ink-3);margin-bottom:16px}
+.qa-item{padding:14px 0;border-top:1px dashed var(--line)}
+.qa-q{font-weight:600;font-size:15px;display:flex;gap:10px;align-items:flex-start}
+.qn{color:var(--accent);font-size:12px;flex:0 0 auto;margin-top:3px}
+.qa-a{display:flex;gap:10px;margin-top:8px;color:var(--ink-2);font-size:14px;line-height:1.8}
+.an{flex:0 0 auto;width:20px;height:20px;border-radius:5px;background:var(--accent);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.arch-head{padding:22px 0 8px}
+.arch-head h2{font-family:var(--serif);font-size:27px}
+.arch-head p{font-size:12px;color:var(--ink-3);margin-top:4px}
+.arch-item{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin:12px 0;box-shadow:var(--shadow)}
+.arch-item .arch-date{font-family:var(--serif);font-size:19px;font-weight:700;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.arch-item .arch-date a:hover{color:var(--accent)}
+.arch-item .arch-date small{font-family:var(--sans);font-size:12px;color:var(--ink-3);font-weight:400}
+.badge-new{font-family:var(--sans);font-size:10px;background:var(--accent);color:#fff;border-radius:20px;padding:2px 8px;font-weight:600;letter-spacing:.05em}
+.arch-item .arch-sum{font-size:13.5px;color:var(--ink-2);line-height:1.75;margin:8px 0 10px}
+.arch-item .arch-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-3)}
+.arch-item .arch-links{margin-left:auto;display:flex;gap:12px}
+.arch-item .arch-links a{color:var(--blue);border-bottom:1px dashed var(--line)}
+.arch-item .arch-links a:hover{border-color:var(--blue)}
+.empty{text-align:center;color:var(--ink-3);padding:40px 0}
+footer{margin-top:50px;padding:24px 0 40px;border-top:3px double var(--ink);font-size:12px;color:var(--ink-3);line-height:1.9}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:640px){.brand h1{font-size:34px}.news{grid-template-columns:26px 1fr;gap:10px;padding:14px 2px}.news .idx{font-size:21px}.news h3{font-size:17px}.tab{padding:10px 12px;font-size:14px}.qa-wrap{padding:14px}.arch-item .arch-links{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="topline"><span>每日热点 · 早晚上新</span><span>往期回顾 · 第 003 期</span></div>
+    <div class="brand">
+      <h1><a href="index.html">热点早晚报</a></h1>
+      <div class="en">Morning &amp; Evening Brief</div>
+      <div class="tagline">人形机器人与具身智能 · 每日早班快讯与晚班全景</div>
+    </div>
+    <div class="metaline">
+      <span class="live"><i></i>每日更新</span>
+      <span>最近更新：2026-11-19 10:39</span>
+      <span>已收录 3 天</span>
+      <span class="navlinks"><a href="index.html">首页</a><a href="archive.html">目录</a></span>
+    </div>
+  </header>
+
+  <nav class="pagenav">
+    <div class="datechip">2026 年 11 月 17 日<small>星期二</small></div>
+    <div class="pn-right">
+      <span class="disabled">← 已是最早</span>
+      <a href="2026-11-18.html">更新一期 · 11月18日 →</a>
+      <a href="archive.html">全部期数 →</a>
+    </div>
+  </nav>
+
+  
+
+  <section class="summary">
+    <div class="label">今 日 速 览</div>
+    <p>一进一退同日上演：华为云开源昇腾原生具身世界模型，OpenAI 撤销独立机器人团队并入核心研究体系。 当日主线是&quot;资本加码、政策定标、场景铺开&quot;三线并行：海外思灵 5 亿美元 F 轮刷新欧洲物理 AI 估值、现代全资控股波士顿动力；国内蓝点触控半年融资超 10 亿元、北京抛出 2028 年京津冀整机产能占全国 25% 的行动方案；星动纪元人形机器人进驻广东邮政 8 城，王兴兴在 APEC 警示泛化与量产压力。行业重心正从&quot;炫技&quot;转向&quot;交付确定性&quot;。</p>
+    <div style="margin-top:10px;font-size:11.5px;color:var(--ink-3)">关键词 · 模型与技术 · 11-16 14:00 · 人事观点 · 11-16 · 融资 · 政策标准</div>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-panel="morning" role="tab">早班快讯<span class="num">12</span></button>
+    <button class="tab" data-panel="evening" role="tab">晚班全景<span class="num">20</span></button>
+    <button class="tab" data-panel="qa" role="tab">核实与跟踪<span class="num">9</span></button>
+  </div>
+
+  <section class="panel active" id="panel-morning">
+    <div class="sec-intro"><span class="big">早班快讯</span><span class="sub">具身智能领域，隔夜与今晨的重要动态</span><span class="rule"></span></div>
+    
+    <article class="news">
+      <div class="idx">01</div>
+      <div>
+        <span class="cat cat-技术">模型与技术</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-16 14:00</span>
+        <h3>华为云发布并开源昇腾原生具身世界模型 CloudRobo-WM1.2</h3>
+        <p>11-16 14:00 发布，主打预测增强的世界表征与原生动作生成，官方援引 RoboTwin 2.0、LiberoPro 2.0 榜单第一。 【关注点】国产算力与具身世界模型首次原生咬合，是&quot;模型+芯片+场景&quot;闭环的关键落子。榜单成绩为厂商口径。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">模型与技术</span><span class="tag">11-16 14:00</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">02</div>
+      <div>
+        <span class="cat cat-观点">人事观点</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-16</span>
+        <h3>OpenAI 撤销独立机器人团队，人员并入核心研究体系</h3>
+        <p>据《财富》报道，机器人研究人员转入首席研究官 Mark Chen 负责的核心研究体系，应用与硬件团队转入 Greg Brockman 负责的应用组织。官方称机器人仍是长期核心方向，调整是为加快进展。 【关注点】通用大模型路线与专用机器人团队的分工再平衡，行业需观察 GPT 系列是否直接承担高层任务规划。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">人事观点</span><span class="tag">11-16</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">03</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-16</span>
+        <h3>曦选创智（无锡）完成 5 亿元天使轮，投后估值 40 亿元</h3>
+        <p>定位机器人端侧&quot;大小脑一体&quot;SoC，首颗自研芯片计划 2028 年推出，目前仍处研发阶段、无量产产品。 【关注点】端侧芯片成为具身赛道新热点，但&quot;计划 2028 推出&quot;属企业规划，不可当成果。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">融资</span><span class="tag">11-16</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">04</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-16</span>
+        <h3>智动未来（AutoLife Robotics）完成亿元级 Pre-A+ 轮，广州新产线同步投产</h3>
+        <p>中美绿色基金领投，累计股权融资达数亿元。核心交付机型小智 S3 为轮式升降形态。 【关注点】融资与产能同步落地，服务场景（展会/酒店/文旅）商业化验证的样本。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">融资</span><span class="tag">11-16</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">05</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-16</span>
+        <h3>蔚建科技完成超亿元 B 轮</h3>
+        <p>财通资本投资。 【关注点】一级市场&quot;挑项目&quot;趋势下的少数完成轮次，资本向有场景闭环的企业集中。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">融资</span><span class="tag">11-16</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">06</div>
+      <div>
+        <span class="cat cat-政策">政策标准</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-16</span>
+        <h3>《人民日报》整版聚焦灵巧手&quot;最后一厘米&quot;</h3>
+        <p>11-16 第 18 版整版报道：核心零部件 100% 国产化、精度 0.1 毫米级、寿命突破 100 万次；北京 2026—2028 行动方案将指标拆为&quot;负载寿命 100 万次、指尖分控 0.1 牛、单只成本万元以内&quot;；国产价格下探至 1—5 万元，单片触觉传感器最低 199 元。 【关注点】政策把技术指标量化为可招标参数，灵巧手产业链有望加速放量。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">政策标准</span><span class="tag">11-16</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">07</div>
+      <div>
+        <span class="cat cat-融资">资本</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-15 稿，11-16 传播</span>
+        <h3>新华社：具身智能融资标尺从&quot;想象力&quot;转向&quot;交付确定性&quot;</h3>
+        <p>上半年赛道融资约千亿元、6 月逾 300 亿元，10 月回落至约 101 亿元；11 月截至 11 日 15 起、40.14 亿元。银河通用已实现超千台规模商业部署。 【关注点】融资降温是估值泡沫出清而非行业萎缩，判断标准改为真实订单与回款能力。银河通用千台部署为企业口径。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">资本</span><span class="tag">11-15 稿，11-16 传播</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">08</div>
+      <div>
+        <span class="cat cat-融资">资本市场</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-16</span>
+        <h3>证券时报：物理 AI 指数近一月 +25.73%，大摩上调出货预测</h3>
+        <p>大摩将中国 2026 年人形机器人出货预测从 2.8 万台上调至约 5 万台，高盛预测 5 万台以上，特斯拉 Optimus 2026 年预计 1.5 万—3.5 万台。宇树科技近一月 +65.76%。 【关注点】出货预测为机构口径，非实际交付；二级市场情绪与产业落地之间仍有温差。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">资本市场</span><span class="tag">11-16</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">09</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-15 至 11-16</span>
+        <h3>优必选 Walker S2 开启量产交付，累计订单破 8 亿元</h3>
+        <p>首批数百台开启交付；雷赛智能透露已进入 80% 以上整机厂供应体系，无框力矩电机全年在手订单超 100 万台。 【关注点】整机订单与上游零部件订单同步放量，但&quot;在手订单&quot;含框架协议，需看实际交付节奏。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">订单与量产</span><span class="tag">11-15 至 11-16</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">10</div>
+      <div>
+        <span class="cat cat-订单量产">场景落地</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-15 至 11-16</span>
+        <h3>长隆飞船乐园 300 多台机器人常态化运营逾月</h3>
+        <p>累计互动超 100 万次，国庆七天运行 1.2 万小时；二期拟扩至近千台。另：智平方 7 台人形机器人进驻 APEC 深圳新闻中心，服务中外记者超 5000 名。 【关注点】从&quot;展会演示&quot;转向&quot;常态化运营&quot;的标杆案例，运营数据比发布会更有说服力。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">场景落地</span><span class="tag">11-15 至 11-16</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">11</div>
+      <div>
+        <span class="cat cat-科技">政策/场景</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-16</span>
+        <h3>马鞍山实景实训挑战赛开幕，设 13 个赛项</h3>
+        <p>覆盖物流、制造、服务等赛项；泰山登顶赛等实景测试持续验证机器人在非结构化环境的稳定性。 【关注点】实景实训正成为政策与产业共同推手，评价标准从&quot;炫技&quot;转向&quot;稳定干活&quot;。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">政策/场景</span><span class="tag">11-16</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">12</div>
+      <div>
+        <span class="cat cat-财经">宏观数据</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">11-16 10:00</span>
+        <h3>10 月工业机器人产量同比 +26.0%</h3>
+        <p>国家统计局 11-16 发布：规上工业增加值 +4.8%，装备制造业 +10.6%、高技术制造业 +17.6%；3D 打印设备 +85.9%、锂电池 +30.0%。 【关注点】宏观口径印证自动化设备景气度，与产业链微观订单信号方向一致。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">宏观数据</span><span class="tag">11-16 10:00</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel" id="panel-evening">
+    <div class="sec-intro"><span class="big">晚班全景</span><span class="sub">当日全天新增披露与趋势观察</span><span class="rule"></span></div>
+    
+    <article class="news">
+      <div class="idx">01</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        
+        <h3>星动纪元人形机器人进驻中国邮政广东网络，覆盖 8 城 11 个枢纽</h3>
+        <p>广东邮政与北京星动纪元（ROBOTERA）联合实施，覆盖广州、深圳、东莞、江门、汕头、汕尾、揭阳、河源 8 城 11 个邮政枢纽；厂商称自 3 月广州试点以来平均分拣效率超 1500 件/小时、可比肩熟练工，并以自研五指灵巧手处理异形件。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://hkbusinesswire.com/robotera-expands-humanoid-robot-deployment-across-china-posts-guangdong-network-reaching-eight-cities-province-wide" target="_blank" rel="noopener noreferrer">PR Newswire/HK Businesswire</a>、<a href="https://www.unite.ai/robotera-deploys-humanoid-robots-at-11-postal-hubs-in-guangdong" target="_blank" rel="noopener noreferrer">Unite.AI</a></span><span class="tag">订单与量产</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">02</div>
+      <div>
+        <span class="cat cat-观点">人事观点</span>
+        
+        <h3>王兴兴在 APEC 工商领导人峰会：成果只是&quot;冰山一角&quot;，泛化不足是首要痛点</h3>
+        <p>宇树科技董事长兼 CEO 王兴兴在 11-17 至 18 日深圳 APEC 工商领导人峰会&quot;共建开放普惠的人工智能创新生态&quot;研讨中称，大众所见的 AI、机器人成果仅是冰山一角，首要痛点是模型泛化能力不足、换场景需重训；提醒若需求从数万台涨至数百万、数千万台，生产制造、可靠性与售后体系将承压，并主张合作共赢、上月生态大会超 1/3 伙伴来自海外。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.youth.cn/jsxw/202611/t20261117_16971083.htm" target="_blank" rel="noopener noreferrer">中国青年网</a>、<a href="https://news.youth.cn/jsxw/202611/t20261117_16970735.htm" target="_blank" rel="noopener noreferrer">中国青年网/财联社-科创板日报</a></span><span class="tag">人事观点</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">03</div>
+      <div>
+        <span class="cat cat-产品发布">产品发布</span>
+        
+        <h3>成都人形机器人创新中心亮相东京 NexTech Week，消费级桌面机型全球首秀</h3>
+        <p>中西部唯一参展的人形机器人企业成都创新中心（CHRIC）携定制配色版镋钯机器人（主打文旅商演、广告投放，支持集群编队与同步舞蹈）参展；RaydiculousX 系列消费级桌面人形机器人完成全球首次公开亮相；镋钯此前进入展会&quot;观众最期待科技产品&quot;投票 TOP5 第三名。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.163.com/dy/article/LBUFV5S80514OL9V.html" target="_blank" rel="noopener noreferrer">天府发布/网易</a></span><span class="tag">产品发布</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">04</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        
+        <h3>何小鹏把小鹏 IRON 量产时点精确到日：2027 年 1 月 1 日</h3>
+        <p>前三季度业绩电话会（11-16 晚）上，何小鹏称 IRON 于 2027 年 1 月 1 日开始量产，一季度先进入部分小鹏门店试用，二季度面向外部商业客户发布交付；定位面向中小商业客户、最终面向家庭的标准化产品，不做大量定制大客户项目，并坦承已售机器人中不少因达不到安全与质量标准堆在仓库。最新版本将在小鹏科技日和广州车展亮相。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">订单与量产</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">05</div>
+      <div>
+        <span class="cat cat-政策">政策标准/场景</span>
+        
+        <h3>第二届黑龙江&quot;冰超&quot;将首次引入机器人赛事，宇树、启元等参与</h3>
+        <p>新华社 11-17 消息，第二届黑龙江省冰雪运动超级联赛于 2026 年 11 月至 2027 年 3 月举办，机器人&quot;冰超&quot;首次亮相；北航、华中科大等高校团队及宇树、启元等企业将在冰雪大世界进行冰上竞赛、水下竞技，人形机器人比速度、稳定与姿态，四足机器人演绎&quot;拉爬犁&quot;。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.xinhuanet.com/20261117/435cd37532ec4965a2eab9109926d82c/c.html" target="_blank" rel="noopener noreferrer">新华网</a></span><span class="tag">政策标准/场景</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">06</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        
+        <h3>六维力传感器龙头蓝点触控完成数亿元 D3 轮，近半年累计融资超 10 亿元</h3>
+        <p>洪泰基金、中关村科学城、弘毅投资、浙创投、奥普特等 14 家机构联合入股；公司披露 2025 年国内人形机器人六维力传感器份额超 80%（赛迪与《中国电子报》调研报告口径），江门基地设计年产关节力传感器 100 万套、末端六维力 20 万套，交付周期压缩至 2—3 周，智元、银河通用、小米、优必选、众擎、星海图等已批量搭载。资金用于新一代产品研发、扩产与全球化，创始人刘吴月称年底可能再开放一轮融资。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.163.com/dy/article/LBUE2DCV053469RG.html" target="_blank" rel="noopener noreferrer">证券时报</a>、<a href="https://www.cnstock.com/commonDetail/829464" target="_blank" rel="noopener noreferrer">上证报中国证券网</a>、<a href="https://m.21jingji.com/article/20261117/herald/09ed0200f3f3e1ef6954fb66867b1de7.html" target="_blank" rel="noopener noreferrer">21财经</a>、<a href="https://news.qq.com/rain/a/20261117A05YEE00" target="_blank" rel="noopener noreferrer">新京报/腾讯新闻</a></span><span class="tag">融资</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">07</div>
+      <div>
+        <span class="cat cat-产品发布">产品发布</span>
+        
+        <h3>星动纪元 XHAND 1 Pro-U 开放商业订购，首批限量 40 台</h3>
+        <p>16 自由度五指灵巧手，机械结构对齐英伟达 GEAR Lab 的 DexUMI 数采外骨骼，出现在英伟达 Jim Fan 于 CoRL 2026 的 GR00T 2 演示中，为唯一官配五指灵巧手；面向研究团队与产业伙伴询价，单价与交付时间未公布。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">产品发布</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">08</div>
+      <div>
+        <span class="cat cat-融资">融资/资本</span>
+        
+        <h3>大寰机器人在深圳证监局办理上市辅导备案（窗口外补充收录）</h3>
+        <p>证监会信息显示，大寰机器人科技于 11-13 办理辅导备案登记，辅导机构国泰海通，计划 2027 年 5 月提交辅导验收申请；从伺服电动夹爪扩展至音圈执行器、灵巧手等部件，报道称 2025 年出货 10 万台（工业精密运动部件口径，非人形整机）。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">融资/资本</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">09</div>
+      <div>
+        <span class="cat cat-技术">技术论文/续报</span>
+        
+        <h3>华为云 CloudRobo-WM1.2 开源边界与榜单&quot;折扣&quot;细节披露</h3>
+        <p>继 11-16 发布后，11-17 多家媒体补充：RoboTwin 2.0 均分 88.98%（发布会口径）、LiberoPro 2.0 综合成功率 81.7% 列官网第一，但 LiberoPro 2.0 基准态成功率 99.6%、动态扰动 86.0%、静态扰动 77.8%，综合值与基准态差 17.9 个百分点；钛媒体称模型、训练框架与昇腾算力实践对核心伙伴定向开放，截至发稿未见权重下载地址。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.china.com/socialgd/10000169/20261117/49878111_all.html" target="_blank" rel="noopener noreferrer">中华网</a></span><span class="tag">技术论文/续报</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">10</div>
+      <div>
+        <span class="cat cat-科技">收购/技术</span>
+        
+        <h3>AMD 完成收购 World Labs，李飞飞出任执行副总裁兼首席科学家</h3>
+        <p>11-16 AMD 官宣完成对李飞飞创办的 World Labs（可创建与模拟交互式 3D 环境、机器人学习仿真技术）的收购，李飞飞加入 AMD 任执行副总裁兼首席科学家、直接向苏姿丰汇报，交易金额未披露；被视为芯片公司争夺物理 AI&quot;空间智能&quot;中间层。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">收购/技术</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">11</div>
+      <div>
+        <span class="cat cat-技术">技术论文</span>
+        
+        <h3>智动未来披露&quot;智子世界&quot;可微粒子世界模型路径</h3>
+        <p>中经报道，智动未来 2026 年 9 月发布&quot;智子世界&quot;可微粒子世界模型预览，将重建、状态编辑、物理推演与动作优化纳入同一框架；并引用加州大学伯克利分校 SuperMimic 研究——人形全身动作跟踪中一张 H100 训练约 3 小时高于基线，而后者用 128 张 L40 训练 7 天（两者硬件与数据规模不同，不可直接比较效率）。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://cj.sina.com.cn/articles/view/6248544856/174713a5802003xjrw" target="_blank" rel="noopener noreferrer">中国经营报/新浪财经</a></span><span class="tag">技术论文</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">12</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        
+        <h3>德国思灵机器人（Agile Robots）完成 5 亿美元 F 轮，估值 85 亿美元</h3>
+        <p>软银集团领投，英伟达、日立集团（日立与日立创投）、T.Capital 等参投，累计投入资本达 20 亿美元，公司称为欧洲估值最高的物理 AI 私营企业；已部署 2 万个工业机器解决方案、逾 3500 名员工，慕尼黑附近 Fürstenfeldbruck 新厂 2026 年初投产、规划年产最多 1 万台足式与轮式人形机器人，资金用于美国扩张与产能建设。工业版 AgileONE 不单独定价，打包进整厂自动化方案（厂商口径）。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://en.yna.co.kr/view/RPR20261117004200353" target="_blank" rel="noopener noreferrer">PR Newswire/韩联社</a>、<a href="https://www.straitstimes.com/paid-press-releases/physical-ai-leader-agile-robots-raises-500-million-series-f-at-85-billion-valuation-to-accelerate-global-growth-20261117" target="_blank" rel="noopener noreferrer">Straits Times</a>、<a href="https://www.tmtpost.com/8208200.html" target="_blank" rel="noopener noreferrer">钛媒体</a></span><span class="tag">融资</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">13</div>
+      <div>
+        <span class="cat cat-科技">收购</span>
+        
+        <h3>现代汽车完成对波士顿动力 100% 控股，Atlas 瞄准 2028 年年产 3 万台</h3>
+        <p>据 Hyundai Glovis 于 11-17 提交的三季度监管文件，与波士顿动力普通股相关的看跌/看涨期权已全部行权到期，现代完成收购软银剩余 9.65% 股份；计划 2028 年前形成 Atlas 年产 3 万台产能，先在美国佐治亚 Metaplant 工厂从事分拣、搬运等低强度任务。波士顿动力 2026 年前 9 个月营收 1360 亿韩元（同比 +29%），净亏损扩大至 6266 亿韩元，IPO 或于 2029—2030 年、尚无官方时间表。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.straitstimes.com/business/hyundai-motor-takes-full-ownership-of-boston-dynamics" target="_blank" rel="noopener noreferrer">Straits Times/The Korea Herald</a></span><span class="tag">收购</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">14</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        
+        <h3>医疗机器人 Remedy Robotics 完成 6200 万美元 B 轮</h3>
+        <p>DCVC 领投，UC Investments、Skip Capital、Hostplus 等参投，用于血管内介入机器人 N1 的关键性临床试验、FDA 审批与原型部署；公司明确 N1 仍在开发、尚未在任何司法辖区销售或常规临床使用（融资≠获批）。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">融资</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">15</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        
+        <h3>意大利 Mosaico 完成 750 万欧元种子轮，United Ventures 领投</h3>
+        <p>OpenOcean 与原投资方 Connect Ventures 参与，Mosaico 开发面向机器人与物理 AI 的开源传感器数据管理平台，支持企业自有基础设施部署；估值未披露，社区用户数未被认定为付费客户。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">融资</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">16</div>
+      <div>
+        <span class="cat cat-政策">政策标准</span>
+        
+        <h3>北京发布具身智能机器人三年行动方案，京津冀整机产能瞄准全国 25%</h3>
+        <p>《北京市具身智能机器人产业高质量发展行动方案（2026—2028年）》提出：到 2028 年培育不少于 5 家国际一流、10 家国内领先人形整机企业；京津冀整机产能占全国 25%、关键零部件配套率超 60%；在不少于 100 个真实场景采集超 100 万小时高质量数据，新增总规模超 5 万 PFlops 专用算力集群；牵头/参与不少于 8 项国际、30 项国家、70 项行业与团体标准，国标参编率 90% 以上。背景：2025 年北京机器人产业营收 518 亿元、人形整机企业超 30 家。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.163.com/dy/article/LBUNBLMQ05199NHJ.html" target="_blank" rel="noopener noreferrer">中国经营报/网易</a></span><span class="tag">政策标准</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">17</div>
+      <div>
+        <span class="cat cat-融资">融资/资本</span>
+        
+        <h3>五一视界启动 A 股上市计划，已提交上市前辅导登记申请</h3>
+        <p>五一视界（06651.HK）11-16 晚港交所公告，为把握物理 AI 机遇拟首发人民币普通股并在深交所上市，已聘辅导机构并提交辅导登记申请；事项仍需董事会、股东会及监管批准，辅导登记≠已递交申报材料≠已上市。</p>
+        <div class="foot"><span class="src">来源 · 公开报道</span><span class="tag">融资/资本</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">18</div>
+      <div>
+        <span class="cat cat-观点">人事观点/资本</span>
+        
+        <h3>21财经：机器人融资降温但未熄火，部分头部 VC &quot;收手&quot;</h3>
+        <p>IT桔子不完全统计，10 月以来具身智能至少 70 起融资，但单轮 10 亿元以上仅星尘智能、法奥机器人两起；红杉中国 10 月以来未投具身项目，IDG、高瓴创投各投一个；资金转向传感器、灵巧手及有明确应用场景的厂商，产业资本与地方国资仍活跃。蓝点触控刘吴月称下半年降温是&quot;良性&quot;变化。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://m.21jingji.com/article/20261117/herald/09ed0200f3f3e1ef6954fb66867b1de7.html" target="_blank" rel="noopener noreferrer">21财经</a></span><span class="tag">人事观点/资本</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">19</div>
+      <div>
+        <span class="cat cat-观点">人事观点</span>
+        
+        <h3>中信建投研报：物理 AI 是&quot;人工智能下一波浪潮&quot;</h3>
+        <p>研报称北美巨头加速布局，通用模型在机器人控制上展现较强潜力，OpenAI 对独立机器人团队架构重构；预计年内特斯拉有望发布 Optimus 非预编程任务视频；建议聚焦优质环节。属卖方研报观点，仅供参考。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.cls.cn/detail/2536118" target="_blank" rel="noopener noreferrer">财联社</a></span><span class="tag">人事观点</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">20</div>
+      <div>
+        <span class="cat cat-融资">资本</span>
+        
+        <h3>港股 AI 硬科技密集上市，商业化验证成估值分水岭</h3>
+        <p>财联社 11-17 报道，伴随港交所 18C 机制落地，大模型、AI 算力芯片、自动驾驶、机器人企业密集递表挂牌，但市场冷热分化、部分新股破发、一二级估值倒挂；具备稳定订单、标准化产品、可控资本开支的标的更易获溢价。属趋势性判断。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.qq.com/rain/a/20261117A02S2M00" target="_blank" rel="noopener noreferrer">腾讯新闻/财联社</a></span><span class="tag">资本</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel" id="panel-qa">
+    <div class="empty">这一栏暂无内容</div>
+    <div class="extra-box"><h4>待核实区（单一来源 / 口径未明）</h4><ol><li>**曦选创智 5 亿元天使轮/40 亿估值**：仅见媒体转述，未找到工商或官方通稿，融资金额与估值待确认。</li><li>**优必选&quot;累计订单破 8 亿元&quot;**：混合了框架协议与确定订单，实际交付量未披露。</li><li>**大摩 5 万台/高盛 5 万台以上/特斯拉 1.5—3.5 万台**：均为机构预测口径，非已实现出货。</li><li>**银河通用&quot;超千台商业部署&quot;、长隆&quot;互动超百万次&quot;**：企业/园方自述，缺第三方审计。</li><li>**CloudRobo-WM1.2 榜单第一**：厂商援引，未附第三方复现数据。</li></ol></div>
+    <div class="extra-box"><h4>明日关注</h4><ol><li>华为云 CloudRobo-WM1.2 是否公布真机部署指标与开源链接。</li><li>OpenAI 机器人团队调整后，是否有进一步的路线说明或人事变动。</li><li>一级市场融资降温趋势能否在 11 月完整数据中延续（当前 11 月截至 11 日仅 40.14 亿元）。</li><li>--</li></ol></div>
+  </section>
+
+  <footer>
+    <div class="row"><span>具身热点早晚报 · 内容摘编自公开媒体报道，来源可点击查看原文</span><span>2026 年 11 月 17 日</span></div>
+    <div class="row"><span>早班快讯 / 晚班全景每日自动更新 · 限定词按原文保留</span><span><a href="archive.html">历史目录</a> · 如有出入，以官方发布为准</span></div>
+  </footer>
+</div>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var panels=[].slice.call(document.querySelectorAll('.panel'));
+  function show(name){
+    tabs.forEach(function(t){t.classList.toggle('active',t.getAttribute('data-panel')===name);});
+    panels.forEach(function(p){p.classList.toggle('active',p.id==='panel-'+name);});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-panel'));});});
+  var h=(location.hash||'').replace('#','');
+  if(h==='morning'||h==='evening'||h==='qa') show(h);
+})();
+</script>
+</body>
+</html>
