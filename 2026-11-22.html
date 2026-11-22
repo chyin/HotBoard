@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>具身热点早晚报 · 2026-11-22 · 早班/晚班</title>
+<meta name="description" content="2026-11-22 人形机器人与具身智能简报，早班快讯 10 条、晚班全景 0 条，附原始新闻链接。">
+<style>
+:root{--paper:#f7f5f0;--surface:#fff;--ink:#1c1b19;--ink-2:#5c584f;--ink-3:#928d82;--line:#e8e3d9;--accent:#b23a2e;--accent-soft:#fbece9;--gold:#a8812c;--gold-soft:#f7f0dd;--blue:#2f5d8a;--blue-soft:#e9f0f7;--green:#2f6b4f;--green-soft:#e7f2ec;--purple:#6b4a8c;--purple-soft:#f0eaf7;--shadow:0 1px 2px rgba(30,25,15,.04),0 8px 24px rgba(30,25,15,.05);--serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",STSong,SimSun,serif;--sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+header.masthead{padding:34px 0 0}
+.topline{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);letter-spacing:.08em;border-top:3px double var(--ink);padding-top:10px}
+.brand{text-align:center;padding:18px 0 14px;border-bottom:1px solid var(--ink)}
+.brand h1{font-family:var(--serif);font-size:50px;letter-spacing:.18em;font-weight:700;line-height:1.1}
+.brand .en{font-size:11px;letter-spacing:.42em;color:var(--accent);margin-top:8px;text-transform:uppercase}
+.brand .tagline{font-size:13px;color:var(--ink-2);margin-top:12px}
+.metaline{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--ink-3);padding:10px 0;border-bottom:1px solid var(--line)}
+.live i{width:7px;height:7px;border-radius:50%;background:#3a9e63;display:inline-block;margin-right:6px}
+.metaline .navlinks{display:flex;gap:14px;margin-left:auto}
+.metaline .navlinks a{color:var(--ink-2);border-bottom:1px solid var(--line);padding-bottom:1px}
+.metaline .navlinks a:hover{color:var(--accent);border-color:var(--accent)}
+.pagenav{padding:20px 0 4px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.datechip{font-family:var(--serif);font-size:24px;font-weight:700}
+.datechip small{font-family:var(--sans);font-size:12px;color:var(--ink-3);font-weight:400;margin-left:8px}
+.pn-right{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink-3)}
+.pn-right a{color:var(--blue);border-bottom:1px dashed var(--line)}
+.pn-right a:hover{border-color:var(--blue)}
+.pn-right .disabled{color:var(--ink-3);opacity:.5}
+.homebar{margin-top:12px;background:var(--gold-soft);border:1px solid #efe4c6;border-radius:5px;padding:10px 14px;font-size:12.5px;color:#7a6320;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.homebar a{color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent)}
+.summary{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:4px;padding:18px 20px;margin:14px 0 24px;box-shadow:var(--shadow)}
+.summary .label{font-size:11px;letter-spacing:.2em;color:var(--accent);font-weight:600}
+.summary p{font-family:var(--serif);font-size:16px;line-height:1.85;margin-top:6px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.tab{appearance:none;background:none;border:none;border-bottom:2px solid transparent;padding:11px 20px;font-size:15px;font-family:var(--sans);color:var(--ink-2);cursor:pointer;transition:.18s;display:flex;align-items:center;gap:8px}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.tab .num{font-size:11px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:0 7px;color:var(--ink-3)}
+.panel{display:none;animation:fade .3s ease}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sec-intro{display:flex;align-items:baseline;gap:14px;margin:4px 0 16px}
+.sec-intro .big{font-family:var(--serif);font-size:26px;font-weight:700}
+.sec-intro .sub{font-size:12px;color:var(--ink-3)}
+.sec-intro .rule{flex:1;height:1px;background:var(--line)}
+.news{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:18px 8px;border-bottom:1px solid var(--line)}
+.news .idx{font-family:var(--serif);font-size:29px;font-weight:700;color:var(--line);line-height:1}
+.cat{display:inline-block;font-size:11px;letter-spacing:.05em;padding:2px 9px;border-radius:3px;font-weight:600}
+.cat-财经,.cat-融资{background:var(--gold-soft);color:var(--gold)}.cat-科技,.cat-技术{background:var(--blue-soft);color:var(--blue)}.cat-民生,.cat-订单量产{background:var(--green-soft);color:var(--green)}.cat-体育,.cat-产品发布{background:var(--purple-soft);color:var(--purple)}.cat-娱乐,.cat-观点{background:var(--accent-soft);color:var(--accent)}.cat-航天,.cat-政策{background:var(--green-soft);color:var(--green)}.cat-时政{background:var(--accent-soft);color:var(--accent)}
+.src-links{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.src-links a{color:var(--blue);border-bottom:1px dashed var(--line);font-size:11.5px}
+.src-links a:hover{border-color:var(--blue)}
+.extra-box{background:var(--gold-soft);border:1px solid #efe4c6;border-radius:5px;padding:12px 16px;margin:16px 0;font-size:12.5px;color:#6d5820}
+.extra-box h4{font-family:var(--serif);font-size:15px;margin-bottom:6px;color:#5a4818}
+.extra-box ol,.extra-box ul{margin:4px 0 0 18px;line-height:1.8}
+.extra-box li{margin:2px 0}
+.news h3{font-family:var(--serif);font-size:19px;line-height:1.5;font-weight:700;margin:8px 0 6px}
+.news p{font-size:14px;color:var(--ink-2);line-height:1.8}
+.news .foot{margin-top:9px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-3)}
+.news .foot .tag{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:1px 9px}
+.qa-wrap{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:18px 22px}
+.qa-wrap h2{font-family:var(--serif);font-size:22px;margin-bottom:4px}
+.qa-tip{font-size:12px;color:var(--ink-3);margin-bottom:16px}
+.qa-item{padding:14px 0;border-top:1px dashed var(--line)}
+.qa-q{font-weight:600;font-size:15px;display:flex;gap:10px;align-items:flex-start}
+.qn{color:var(--accent);font-size:12px;flex:0 0 auto;margin-top:3px}
+.qa-a{display:flex;gap:10px;margin-top:8px;color:var(--ink-2);font-size:14px;line-height:1.8}
+.an{flex:0 0 auto;width:20px;height:20px;border-radius:5px;background:var(--accent);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.arch-head{padding:22px 0 8px}
+.arch-head h2{font-family:var(--serif);font-size:27px}
+.arch-head p{font-size:12px;color:var(--ink-3);margin-top:4px}
+.arch-item{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin:12px 0;box-shadow:var(--shadow)}
+.arch-item .arch-date{font-family:var(--serif);font-size:19px;font-weight:700;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.arch-item .arch-date a:hover{color:var(--accent)}
+.arch-item .arch-date small{font-family:var(--sans);font-size:12px;color:var(--ink-3);font-weight:400}
+.badge-new{font-family:var(--sans);font-size:10px;background:var(--accent);color:#fff;border-radius:20px;padding:2px 8px;font-weight:600;letter-spacing:.05em}
+.arch-item .arch-sum{font-size:13.5px;color:var(--ink-2);line-height:1.75;margin:8px 0 10px}
+.arch-item .arch-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-3)}
+.arch-item .arch-links{margin-left:auto;display:flex;gap:12px}
+.arch-item .arch-links a{color:var(--blue);border-bottom:1px dashed var(--line)}
+.arch-item .arch-links a:hover{border-color:var(--blue)}
+.empty{text-align:center;color:var(--ink-3);padding:40px 0}
+footer{margin-top:50px;padding:24px 0 40px;border-top:3px double var(--ink);font-size:12px;color:var(--ink-3);line-height:1.9}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:640px){.brand h1{font-size:34px}.news{grid-template-columns:26px 1fr;gap:10px;padding:14px 2px}.news .idx{font-size:21px}.news h3{font-size:17px}.tab{padding:10px 12px;font-size:14px}.qa-wrap{padding:14px}.arch-item .arch-links{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="topline"><span>每日热点 · 早晚上新</span><span>往期回顾 · 第 006 期</span></div>
+    <div class="brand">
+      <h1><a href="index.html">热点早晚报</a></h1>
+      <div class="en">Morning &amp; Evening Brief</div>
+      <div class="tagline">人形机器人与具身智能 · 每日早班快讯与晚班全景</div>
+    </div>
+    <div class="metaline">
+      <span class="live"><i></i>每日更新</span>
+      <span>最近更新：2026-11-22 08:14</span>
+      <span>已收录 6 天</span>
+      <span class="navlinks"><a href="index.html">首页</a><a href="archive.html">目录</a></span>
+    </div>
+  </header>
+
+  <nav class="pagenav">
+    <div class="datechip">2026 年 11 月 22 日<small>星期日</small></div>
+    <div class="pn-right">
+      <a href="2026-11-21.html">← 更早一期 · 11月21日</a>
+      <span class="disabled">已是最新 →</span>
+      <a href="archive.html">全部期数 →</a>
+    </div>
+  </nav>
+
+  
+
+  <section class="summary">
+    <div class="label">今 日 速 览</div>
+    <p>周末热点转向&quot;场景与生态&quot;：地方产业基金、量产基地与实景实训密集落地，整机叙事从发布转向兑现。</p>
+    <div style="margin-top:10px;font-size:11.5px;color:var(--ink-3)">关键词 · 政策标准 · 2026-11-22（人民日报刊发） · 产品发布 · 2026-11-21（世界计算大会·具身智能分论坛） · 2026-11-21（报道记者发稿日） · 订单与量产</div>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-panel="morning" role="tab">早班快讯<span class="num">10</span></button>
+    <button class="tab" data-panel="evening" role="tab">晚班全景<span class="num">0</span></button>
+    <button class="tab" data-panel="qa" role="tab">热点问答<span class="num">3</span></button>
+    <button class="tab" data-panel="verify" role="tab">核实与跟踪<span class="num">9</span></button>
+  </div>
+
+  <section class="panel active" id="panel-morning">
+    <div class="sec-intro"><span class="big">早班快讯</span><span class="sub">具身智能领域，隔夜与今晨的重要动态</span><span class="rule"></span></div>
+    
+    <article class="news">
+      <div class="idx">01</div>
+      <div>
+        <span class="cat cat-政策">政策标准</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-22（人民日报刊发）</span>
+        <h3>深圳设立 100 亿元人工智能和具身机器人产业基金，2025 年全球人形机器人出货前五深圳占三席</h3>
+        <p>11 月 22 日《人民日报》头版报道，深圳设立 100 亿元人工智能和具身机器人产业基金、50 亿元人工智能终端产业投资基金；深圳累计发布 5 批近 300 个&quot;城市+人工智能&quot;应用场景，仅龙岗区就梳理出覆盖 21 个领域、564 个具体场景的应用需求。报道援引数据称，2025 年深圳人工智能核心产业营收超 2200 亿元、规上企业超 2600 家，2025 年全球人形机器人出货约 1.3 万台、出货量前五中深圳企业占三席。 【关注点】一线城市把&quot;场景开放+百亿级基金&quot;同时摆上台面，具身智能竞争从单个企业比拼升级为城市生态与资本供给的比拼。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="http://m2.people.cn/news/default.html?s=MV8xXzQwODM4MTg1XzEwMDRfMTc5NTI5ODI3OA==&amp;from=tencent" target="_blank" rel="noopener noreferrer">人民日报（11-22 头版）</a>、<a href="https://www.ce.cn/xwzx/gnsz/gdxw/202611/t20261122_3301755.shtml" target="_blank" rel="noopener noreferrer">中国经济网（11-22）</a>、<a href="https://finance.sina.com.cn/jjxw/2026-11-22/doc-inizpyzq3024011.shtml" target="_blank" rel="noopener noreferrer">新浪财经（11-22）</a></span><span class="tag">政策标准</span><span class="tag">2026-11-22（人民日报刊发）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">02</div>
+      <div>
+        <span class="cat cat-产品发布">产品发布</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-21（世界计算大会·具身智能分论坛）</span>
+        <h3>中科云谷携&quot;一脑多型&quot;亮相 2026 世界计算大会，Z01 人形机器人支撑亚太机器人世界杯长沙邀请赛</h3>
+        <p>11 月 21 日湖南日报报道，2026 世界计算大会期间，中联重科旗下中科云谷展示&quot;一脑多型&quot;具身智能技术体系，产品覆盖 1.4 米、1.7 米双足人形机器人与全尺寸轮式人形机器人，并展出全流程工具链平台 RobotOps 具身智能操作系统和面向工业机器人的具身智能系统 ZBrain；同一套&quot;云谷工业具身智慧大脑&quot;向工程机械、农业机械、矿山装备等领域延伸。中科云谷为 2026 RCAP 亚太机器人世界杯长沙国际邀请赛（足球、工业、家庭三大项目）提供统一的 Z01 人形机器人（赛事定制版）、操作系统及研发支持。 【关注点】工程机械巨头把&quot;一脑多型&quot;作为全场景落地路径，验证同一具身大脑跨形态迁移的工业化路线。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="http://gu.qq.com/resources/shy/news/detail-v2/index.html#/?id=nesSN20261121204456a7086ee4&amp;s=b" target="_blank" rel="noopener noreferrer">湖南日报·华声在线（11-21）</a>、<a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_1086b01c79615752" target="_blank" rel="noopener noreferrer">腾讯搜索转载（11-21）</a></span><span class="tag">产品发布</span><span class="tag">2026-11-21（世界计算大会·具身智能分论坛）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">03</div>
+      <div>
+        <span class="cat cat-政策">政策标准</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-21（报道记者发稿日）</span>
+        <h3>江西布局具身智能及人形机器人等九大未来产业赛道，鄱阳湖生态科技城建成省内首条人形机器人产线</h3>
+        <p>11 月 21 日经济日报报道（记者南昌 11 月 21 日讯），江西前瞻布局金属新材料、脑机接口、具身智能及人形机器人、核医疗、固态电池等九大未来产业新赛道，鄱阳湖生态科技城已建成省内首条人形机器人产线；围绕九大赛道部署创新策源、场景牵引等五大任务，构建&quot;一个行动计划、一只赛道基金、一批龙头企业&quot;等&quot;八个一&quot;培育机制，每年发布不少于 10 个省级标志性应用场景；提出到 2030 年部分赛道形成 500 亿元至千亿元级特色产业集群。今年前三季度江西规上高技术制造业增加值同比增长 9.5%。 【关注点】中部省份以&quot;产线+基金+场景清单&quot;组合入场，具身智能区域竞争从长三角、珠三角向内陆扩散。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="http://paper.ce.cn/pad/content/202611/22/content_342287.html" target="_blank" rel="noopener noreferrer">经济日报（11-22 刊发，11-21 讯）</a></span><span class="tag">政策标准</span><span class="tag">2026-11-21（报道记者发稿日）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">04</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-22（媒体披露，服务发生在 APEC 会议周）</span>
+        <h3>智平方 APEC 新闻中心咖啡机器人一周服务 5000 多名中外记者，单台日做五六百杯</h3>
+        <p>11 月 22 日新浪财经刊文披露，APEC 领导人会议期间，智平方机器人操控咖啡机、冰淇淋机、果汁机现场制作饮品，单台机器人一天可做五六百杯咖啡，一周累计服务 5000 多名中外记者；进场前厂家找来约 2000 名志愿者开展安全压力测试，新闻中心另行发起安全攻防挑战，机器人通过认证后方获准进场。 【关注点】一次高并发、真流量的公众场景压力测试，把&quot;能不能稳定干活&quot;和&quot;出错了怎么办&quot;同时摆上台面，安全认证成为落地前置门槛。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="http://finance.sina.com.cn/roll/2026-11-22/doc-inizpyzs9240713.shtml" target="_blank" rel="noopener noreferrer">新浪财经（11-22）</a>、<a href="https://k.sina.com.cn/article_7857201856_1d45362c001908vs9s.html" target="_blank" rel="noopener noreferrer">新浪 AI 热点小时报（11-22 08 时）</a></span><span class="tag">订单与量产</span><span class="tag">2026-11-22（媒体披露，服务发生在 APEC 会议周）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">05</div>
+      <div>
+        <span class="cat cat-产品发布">产品发布</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-21（博览会开幕日展示）</span>
+        <h3>众擎 T800 全尺寸人形机器人亮相郑州中部投资贸易博览会，&quot;身外化身&quot;1:1 复刻人的动作</h3>
+        <p>11 月 21 日至 23 日第十四届中国中部投资贸易博览会在河南郑州举行，总展览面积 3 万平方米；11 月 21 日现场展示众擎 T800 全尺寸人形机器人&quot;身外化身&quot;技术体验，通过该技术机器人可 1:1 复刻人的动作。新华社记者李嘉南摄。 【关注点】全尺寸人形机器人以&quot;动作复刻&quot;作为对外展示重点，遥操作/动作迁移能力正成为整机厂差异化的展示抓手。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.gmw.cn/2026-11/22/content_39113682.htm" target="_blank" rel="noopener noreferrer">光明网·光明日报（11-22 03 版）</a>、<a href="https://zqb.cyol.com/pc/content/202611/22/content_433249.html" target="_blank" rel="noopener noreferrer">中国青年报（11-22 01 版）</a></span><span class="tag">产品发布</span><span class="tag">2026-11-21（博览会开幕日展示）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">06</div>
+      <div>
+        <span class="cat cat-产品发布">产品发布</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-22（媒体披露）</span>
+        <h3>大晓机器人把&quot;双脑协同&quot;带入上海酒店洗衣场景，首次集中展示世界模型、通用模型与 RSI 协同</h3>
+        <p>11 月 22 日新浪财经报道，大晓机器人近日将&quot;双脑协同&quot;架构带入上海徐汇区一家酒店洗衣场景，首次集中展示世界模型、通用模型与具身智能 RSI（递归自我改进）的协同应用：机器人完成从客房取衣、送洗衣房、开关洗衣机、烘干装篮到送回客房的多步骤任务。此前在复兴岛实景实训中，其自研 Karios 世界模型已迭代至 3.1 版本并开源，ACE-Data-0 数据集覆盖上万小时、30 多个场景、15 万余件物品、800 多个动作，ViDiHand 技术把标注误差从 8.1% 降至 0.3%、准确率 99.7%（厂商口径）。 【关注点】把世界模型、通用模型与自我改进机制放进真实酒店流程，是&quot;数据—模型—产品—数据&quot;闭环少见的完整样本；精度指标为厂商口径。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="http://finance.sina.com.cn/tjhz/2026-11-22/doc-inizpyzn6256649.shtml" target="_blank" rel="noopener noreferrer">新浪财经（11-22）</a>、<a href="https://www.shobserver.com/staticsg/res/html/web/newsDetail.html?id=1216911" target="_blank" rel="noopener noreferrer">上观新闻（11-22）</a>、<a href="https://www.163.com/dy/article/LCAT4MU505348TJL.html" target="_blank" rel="noopener noreferrer">网易（转述，11-22）</a></span><span class="tag">产品发布</span><span class="tag">2026-11-22（媒体披露）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">07</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-22（报道刊发）</span>
+        <h3>济南机器人产业前 8 月营收 169.3 亿元，从展台走上产线，储备项目计划投资近 130 亿元</h3>
+        <p>11 月 22 日济南日报·趵眼报道，济南平阴县智创空间孵化园的具身智能训练场年度有效数据采集时长接近 7 万小时、可年产高质量数据集超 300 万条；2026 年 9 月济南天桥区恒元智启山东具身智能产业基地第 300 台新款机器人下线，标志智元机器人&quot;济南造&quot;从落地进入量产。2026 年前 8 个月济南机器人产业实现营收 169.3 亿元、同比增长 17.1%；截至 2026 年 10 月，济南机器人企业达 152 家、落地项目 16 个、储备重点项目 108 个、计划总投资近 130 亿元；7 月发布首批 318 个机器人应用场景，覆盖农业、制造业、建筑业等 12 个门类。 【关注点】以&quot;场景即订单入口&quot;的思路把整机量产、后端服务与数据训练串成链条，是地方具身智能集群化落地的可复核样本。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.qq.com/rain/a/20261122A049WU00" target="_blank" rel="noopener noreferrer">腾讯新闻·济南日报趵眼（11-22）</a></span><span class="tag">订单与量产</span><span class="tag">2026-11-22（报道刊发）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">08</div>
+      <div>
+        <span class="cat cat-技术">技术论文</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">时间待确认（论文发布日未明确）</span>
+        <h3>复旦等提出世界批评模型 WCM，称在 149 项 VLA 机器人任务上超越 SOTA 并开源</h3>
+        <p>复旦大学、上海创智学院、同济大学团队提出 World Critic Model（WCM），采用基于 JEPA 的轻量架构预测未来潜状态并估计价值，可接入 π0、π0.5、OpenVLA-OFT 等主流 VLA 骨干网络；论文称在 four benchmarks 共 149 项任务上超越当时最优水平，并以 7 项真机操作任务验证非仿真效果。论文、代码与数据集均已发布。（发布具体日期未在检索中明确，时间待确认） 【关注点】把&quot;世界模型&quot;从生成未来推进到为 VLA 动作打分筛选，为长程记忆类任务提供新的评估与改进接口。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://agihunt.info/en/p/1a0262f1de4ce3a87fa74d5365c" target="_blank" rel="noopener noreferrer">AGI Hunt（英文报道，11-22 检索）</a></span><span class="tag">技术论文</span><span class="tag">时间待确认（论文发布日未明确）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">09</div>
+      <div>
+        <span class="cat cat-观点">人事观点</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-21（日报刊载，为计划口径）</span>
+        <h3>何小鹏透露量产版 IRON 机器人计划明年一季度进门店商用、二季度对外发布</h3>
+        <p>11 月 21 日小鹏汽车日报汇总信息显示，何小鹏透露量产版 IRON 机器人计划明年一季度进入门店商用、二季度对外发布；华泰 11 月 17 日研报将小鹏人形机器人业务估值约 422 亿元首次排到整车板块（约 417 亿元）之前。另据海外披露，小鹏围绕&quot;物理 AI&quot;发布第二代 VLA、Robotaxi、新一代 IRON 与汇天飞行体系四项应用，称均将在 2026 年进入量产（计划口径）。 【关注点】车企把机器人估值排到整车之前，并给出进店时间点，是&quot;车企造机器人&quot;从战略叙事转向商用排期的信号；时间点仍属计划。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://post.smzdm.com/p/a264gl6n" target="_blank" rel="noopener noreferrer">什么值得买·小鹏汽车 11.21 日报</a>、<a href="https://www.gmt8press.com/flash/detail/1126132" target="_blank" rel="noopener noreferrer">GMT EIGHT（英文，物理 AI 四项应用）</a></span><span class="tag">人事观点</span><span class="tag">2026-11-21（日报刊载，为计划口径）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">10</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">时间待确认（联合发布日未明确）</span>
+        <h3>地瓜机器人与宇树科技联合推出具身智能教育解决方案，旭日 S100 支撑真机教学闭环</h3>
+        <p>地瓜机器人与宇树科技联合推出具身智能教育解决方案，以旭日 S100 为合作起点支撑真机教学闭环；双方称将以教育为长期协作起点，结合后续教育与工业等多元场景需求，把合作拓展至地瓜机器人旭日 S 与 X 双系全平台产品。地瓜机器人生态副总裁胡春旭表示，宇树在核心零部件、运动控制和整机产品上的研发实力与地瓜智能计算平台形成互补。（联合发布具体日期未在检索中明确，时间待确认） 【关注点】教育场景成为算力平台与整机厂绑定出货的切入口，&quot;计算平台+本体&quot;组合式销售开始成型。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://voice.hupu.com/bbs/643464800" target="_blank" rel="noopener noreferrer">虎扑·企业动态</a></span><span class="tag">订单与量产</span><span class="tag">时间待确认（联合发布日未明确）</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel" id="panel-evening">
+    <div class="sec-intro"><span class="big">晚班全景</span><span class="sub">当日全天新增披露与趋势观察</span><span class="rule"></span></div>
+    <div class="empty">这一栏暂无内容（该时段简报尚未生成）</div>
+  </section>
+
+  <section class="panel" id="panel-qa">
+    <div class="qa-wrap"><h2>热点问答</h2><div class="qa-tip">以下问答根据当日收录的内容整理。</div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q1</span>深圳设立 100 亿元人工智能和具身机器人产业基金，2025 年全球人形机器人出货前五深圳占三席，这件事具体是怎么回事？</div>
+      <div class="qa-a"><span class="an">A</span><div>11 月 22 日《人民日报》头版报道，深圳设立 100 亿元人工智能和具身机器人产业基金、50 亿元人工智能终端产业投资基金；深圳累计发布 5 批近 300 个&quot;城市+人工智能&quot;应用场景，仅龙岗区就梳理出覆盖 21 个领域、564 个具体场景的应用需求。报道援引数据称，2025 年深圳人工智能核心产业营收超 2200 亿元、规上企业超 2600 家，2025 年全球人形机器人出货约 1.3 万台、出货量前五中深圳企业占三席。 【关注点】一线城市把&quot;场景开放+百亿级基金&quot;同时摆上台面，具身智能竞争从单个企业比拼升级为城市生态与资本供给的比拼。（来源：人民日报（11-22 头版）、中国经济网（11-22）、新浪财经（11-22））</div></div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q2</span>中科云谷携&quot;一脑多型&quot;亮相 2026 世界计算大会，Z01 人形机器人支撑亚太机器人世界杯长沙邀请赛，值得关注的原因是什么？</div>
+      <div class="qa-a"><span class="an">A</span><div>11 月 21 日湖南日报报道，2026 世界计算大会期间，中联重科旗下中科云谷展示&quot;一脑多型&quot;具身智能技术体系，产品覆盖 1.4 米、1.7 米双足人形机器人与全尺寸轮式人形机器人，并展出全流程工具链平台 RobotOps 具身智能操作系统和面向工业机器人的具身智能系统 ZBrain；同一套&quot;云谷工业具身智慧大脑&quot;向工程机械、农业机械、矿山装备等领域延伸。中科云谷为 2026 RCAP 亚太机器人世界杯长沙国际邀请赛（足球、工业、家庭三大项目）提供统一的 Z01 人形机器人（赛事定制版）、操作系统及研发支持。 【关注点】工程机械巨头把&quot;一脑多型&quot;作为全场景落地路径，验证同一具身大脑跨形态迁移的工业化路线。（来源：湖南日报·华声在线（11-21）、腾讯搜索转载（11-21））</div></div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q3</span>今天具身智能领域，江西布局具身智能及人形机器人等九大未来产业赛道，鄱阳湖生态科技城建成省内首条人形机器人产线释放了什么信号？</div>
+      <div class="qa-a"><span class="an">A</span><div>11 月 21 日经济日报报道（记者南昌 11 月 21 日讯），江西前瞻布局金属新材料、脑机接口、具身智能及人形机器人、核医疗、固态电池等九大未来产业新赛道，鄱阳湖生态科技城已建成省内首条人形机器人产线；围绕九大赛道部署创新策源、场景牵引等五大任务，构建&quot;一个行动计划、一只赛道基金、一批龙头企业&quot;等&quot;八个一&quot;培育机制，每年发布不少于 10 个省级标志性应用场景；提出到 2030 年部分赛道形成 500 亿元至千亿元级特色产业集群。今年前三季度江西规上高技术制造业增加值同比增长 9.5%。 【关注点】中部省份以&quot;产线+基金+场景清单&quot;组合入场，具身智能区域竞争从长三角、珠三角向内陆扩散。（来源：经济日报（11-22 刊发，11-21 讯））</div></div>
+    </div></div>
+  </section>
+
+  <section class="panel" id="panel-verify">
+    <div class="extra-box"><h4>待核实区（单一来源 / 口径未明）</h4><ol><li>**Genesis AI 完成约 5 亿美元（约 33 亿元）A 轮融资、投后估值 35 亿美元（约 233 亿元）**：称由 Premji Invest、Khosla Ventures、Eclipse 联合领投，英伟达 NVentures、AMD 风投、三星 Next、Zoom 风投等跟投；计划先进入制造、物流和实验室，2027 年进入客户现场。事件原始披露时间为 11-17，属窗口外补录，且金额与估值仅见财富号融资周报及境外转述，待一手公告核实。来源、NewsFind（英文）</li><li>**蓝点触控完成数亿元 D3 轮融资、近半年累计融资超 10 亿元**：称由洪泰基金、中关村科学城、弘毅投资等 14 家机构联合投资；称智元、银河通用、小米、优必选、众擎、星海图等已批量搭载，多个单一客户实现万台级出货。事件原始时间 11-17，仅见融资周报单一来源，客户出货数字待核实。来源</li><li>**柏川数据完成 5000 万元 Pre-A 轮、蔚建科技完成超亿元 B 轮、鹰瞰智翼完成数千万元 Pre-B 轮**：均为 11-14 至 11-20 窗口内事件、11-22 融资周报汇总；其中柏川数据称已累计交付超 20 万小时具身智能有效数据、2027 年预计突破百万小时，均为单一来源与厂商预计口径，待核实。来源</li><li>**越疆人形机器人在深圳 K11 商场做&quot;爆米花店员&quot;，每天工作 14 小时、日销超千杯**：见 11-22 人民日报/新浪财经报道中的场景举例，未有独立事件稿与运营方数据佐证，作为单一场景口径待核实。来源</li><li>**国产本体&quot;迈入万台量产&quot;相关口径**：11-22 东方财富财富号称宇树截至 2026 年中纯双足人形机器人累计下线破 1.8 万台、智元上半年全品类下线超 1.5 万台、优必选柳州万台级工厂年内投产；数据与 11 月早前公开口径存在差异，且为自媒体转述，待官方确认。来源</li><li>**大晓机器人 ACE-Data-0 数据集&quot;规模最大&quot;及 ViDiHand 标注误差 0.3%、准确率 99.7%**：仅见厂商口径与媒体转述，&quot;公开可查询规模最大&quot;为自称，缺少第三方基准核验。来源</li></ol></div>
+    <div class="extra-box"><h4>明日关注</h4><ol><li>**小鹏 2026 AI Day（11 月 25 日·广州，主题&quot;ORIGIN&quot;）**：关注量产版 IRON 是否给出明确交付与进店时间表，以及第二代 VLA、Robotaxi 的量产口径。</li><li>**2026 世界计算大会（11 月 19—21 日）后续成果清单**：关注具身智能计算相关标准、算力发展十大趋势及项目签约的具体落地内容。</li><li>**深圳百亿具身机器人产业基金的出资与申报细则**：关注基金管理人、投向与首批场景开放清单，验证&quot;场景+资本&quot;组合是否真正落地。</li></ol></div>
+  </section>
+
+  <footer>
+    <div class="row"><span>具身热点早晚报 · 内容摘编自公开媒体报道，来源可点击查看原文</span><span>2026 年 11 月 22 日</span></div>
+    <div class="row"><span>早班快讯 / 晚班全景每日自动更新 · 限定词按原文保留</span><span><a href="archive.html">历史目录</a> · 如有出入，以官方发布为准</span></div>
+  </footer>
+</div>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var panels=[].slice.call(document.querySelectorAll('.panel'));
+  function show(name){
+    tabs.forEach(function(t){t.classList.toggle('active',t.getAttribute('data-panel')===name);});
+    panels.forEach(function(p){p.classList.toggle('active',p.id==='panel-'+name);});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-panel'));});});
+  var h=(location.hash||'').replace('#','');
+  if(h==='morning'||h==='evening'||h==='qa'||h==='verify') show(h);
+})();
+</script>
+</body>
+</html>
