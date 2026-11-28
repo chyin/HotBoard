@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>具身热点早晚报 · 2026-11-28 · 早班/晚班</title>
+<meta name="description" content="2026-11-28 人形机器人与具身智能简报，早班快讯 12 条、晚班全景 28 条，附原始新闻链接。">
+<style>
+:root{--paper:#f7f5f0;--surface:#fff;--ink:#1c1b19;--ink-2:#5c584f;--ink-3:#928d82;--line:#e8e3d9;--accent:#b23a2e;--accent-soft:#fbece9;--gold:#a8812c;--gold-soft:#f7f0dd;--blue:#2f5d8a;--blue-soft:#e9f0f7;--green:#2f6b4f;--green-soft:#e7f2ec;--purple:#6b4a8c;--purple-soft:#f0eaf7;--shadow:0 1px 2px rgba(30,25,15,.04),0 8px 24px rgba(30,25,15,.05);--serif:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",STSong,SimSun,serif;--sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+header.masthead{padding:34px 0 0}
+.topline{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);letter-spacing:.08em;border-top:3px double var(--ink);padding-top:10px}
+.brand{text-align:center;padding:18px 0 14px;border-bottom:1px solid var(--ink)}
+.brand h1{font-family:var(--serif);font-size:50px;letter-spacing:.18em;font-weight:700;line-height:1.1}
+.brand .en{font-size:11px;letter-spacing:.42em;color:var(--accent);margin-top:8px;text-transform:uppercase}
+.brand .tagline{font-size:13px;color:var(--ink-2);margin-top:12px}
+.metaline{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--ink-3);padding:10px 0;border-bottom:1px solid var(--line)}
+.live i{width:7px;height:7px;border-radius:50%;background:#3a9e63;display:inline-block;margin-right:6px}
+.metaline .navlinks{display:flex;gap:14px;margin-left:auto}
+.metaline .navlinks a{color:var(--ink-2);border-bottom:1px solid var(--line);padding-bottom:1px}
+.metaline .navlinks a:hover{color:var(--accent);border-color:var(--accent)}
+.pagenav{padding:20px 0 4px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.datechip{font-family:var(--serif);font-size:24px;font-weight:700}
+.datechip small{font-family:var(--sans);font-size:12px;color:var(--ink-3);font-weight:400;margin-left:8px}
+.pn-right{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink-3)}
+.pn-right a{color:var(--blue);border-bottom:1px dashed var(--line)}
+.pn-right a:hover{border-color:var(--blue)}
+.pn-right .disabled{color:var(--ink-3);opacity:.5}
+.homebar{margin-top:12px;background:var(--gold-soft);border:1px solid #efe4c6;border-radius:5px;padding:10px 14px;font-size:12.5px;color:#7a6320;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.homebar a{color:var(--accent);font-weight:600;border-bottom:1px solid var(--accent)}
+.summary{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:4px;padding:18px 20px;margin:14px 0 24px;box-shadow:var(--shadow)}
+.summary .label{font-size:11px;letter-spacing:.2em;color:var(--accent);font-weight:600}
+.summary p{font-family:var(--serif);font-size:16px;line-height:1.85;margin-top:6px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.tab{appearance:none;background:none;border:none;border-bottom:2px solid transparent;padding:11px 20px;font-size:15px;font-family:var(--sans);color:var(--ink-2);cursor:pointer;transition:.18s;display:flex;align-items:center;gap:8px}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.tab .num{font-size:11px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:0 7px;color:var(--ink-3)}
+.panel{display:none;animation:fade .3s ease}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sec-intro{display:flex;align-items:baseline;gap:14px;margin:4px 0 16px}
+.sec-intro .big{font-family:var(--serif);font-size:26px;font-weight:700}
+.sec-intro .sub{font-size:12px;color:var(--ink-3)}
+.sec-intro .rule{flex:1;height:1px;background:var(--line)}
+.news{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:18px 8px;border-bottom:1px solid var(--line)}
+.news .idx{font-family:var(--serif);font-size:29px;font-weight:700;color:var(--line);line-height:1}
+.cat{display:inline-block;font-size:11px;letter-spacing:.05em;padding:2px 9px;border-radius:3px;font-weight:600}
+.cat-财经,.cat-融资{background:var(--gold-soft);color:var(--gold)}.cat-科技,.cat-技术{background:var(--blue-soft);color:var(--blue)}.cat-民生,.cat-订单量产{background:var(--green-soft);color:var(--green)}.cat-体育,.cat-产品发布{background:var(--purple-soft);color:var(--purple)}.cat-娱乐,.cat-观点{background:var(--accent-soft);color:var(--accent)}.cat-航天,.cat-政策{background:var(--green-soft);color:var(--green)}.cat-时政{background:var(--accent-soft);color:var(--accent)}
+.src-links{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.src-links a{color:var(--blue);border-bottom:1px dashed var(--line);font-size:11.5px}
+.src-links a:hover{border-color:var(--blue)}
+.extra-box{background:var(--gold-soft);border:1px solid #efe4c6;border-radius:5px;padding:12px 16px;margin:16px 0;font-size:12.5px;color:#6d5820}
+.extra-box h4{font-family:var(--serif);font-size:15px;margin-bottom:6px;color:#5a4818}
+.extra-box ol,.extra-box ul{margin:4px 0 0 18px;line-height:1.8}
+.extra-box li{margin:2px 0}
+.news h3{font-family:var(--serif);font-size:19px;line-height:1.5;font-weight:700;margin:8px 0 6px}
+.news p{font-size:14px;color:var(--ink-2);line-height:1.8}
+.news .foot{margin-top:9px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-3)}
+.news .foot .tag{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:1px 9px}
+.qa-wrap{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:18px 22px}
+.qa-wrap h2{font-family:var(--serif);font-size:22px;margin-bottom:4px}
+.qa-tip{font-size:12px;color:var(--ink-3);margin-bottom:16px}
+.qa-item{padding:14px 0;border-top:1px dashed var(--line)}
+.qa-q{font-weight:600;font-size:15px;display:flex;gap:10px;align-items:flex-start}
+.qn{color:var(--accent);font-size:12px;flex:0 0 auto;margin-top:3px}
+.qa-a{display:flex;gap:10px;margin-top:8px;color:var(--ink-2);font-size:14px;line-height:1.8}
+.an{flex:0 0 auto;width:20px;height:20px;border-radius:5px;background:var(--accent);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.arch-head{padding:22px 0 8px}
+.arch-head h2{font-family:var(--serif);font-size:27px}
+.arch-head p{font-size:12px;color:var(--ink-3);margin-top:4px}
+.arch-item{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin:12px 0;box-shadow:var(--shadow)}
+.arch-item .arch-date{font-family:var(--serif);font-size:19px;font-weight:700;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.arch-item .arch-date a:hover{color:var(--accent)}
+.arch-item .arch-date small{font-family:var(--sans);font-size:12px;color:var(--ink-3);font-weight:400}
+.badge-new{font-family:var(--sans);font-size:10px;background:var(--accent);color:#fff;border-radius:20px;padding:2px 8px;font-weight:600;letter-spacing:.05em}
+.arch-item .arch-sum{font-size:13.5px;color:var(--ink-2);line-height:1.75;margin:8px 0 10px}
+.arch-item .arch-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-3)}
+.arch-item .arch-links{margin-left:auto;display:flex;gap:12px}
+.arch-item .arch-links a{color:var(--blue);border-bottom:1px dashed var(--line)}
+.arch-item .arch-links a:hover{border-color:var(--blue)}
+.empty{text-align:center;color:var(--ink-3);padding:40px 0}
+footer{margin-top:50px;padding:24px 0 40px;border-top:3px double var(--ink);font-size:12px;color:var(--ink-3);line-height:1.9}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:640px){.brand h1{font-size:34px}.news{grid-template-columns:26px 1fr;gap:10px;padding:14px 2px}.news .idx{font-size:21px}.news h3{font-size:17px}.tab{padding:10px 12px;font-size:14px}.qa-wrap{padding:14px}.arch-item .arch-links{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="topline"><span>每日热点 · 早晚上新</span><span>往期回顾 · 第 012 期</span></div>
+    <div class="brand">
+      <h1><a href="index.html">热点早晚报</a></h1>
+      <div class="en">Morning &amp; Evening Brief</div>
+      <div class="tagline">人形机器人与具身智能 · 每日早班快讯与晚班全景</div>
+    </div>
+    <div class="metaline">
+      <span class="live"><i></i>每日更新</span>
+      <span>最近更新：2026-11-28 20:02</span>
+      <span>已收录 12 天</span>
+      <span class="navlinks"><a href="index.html">首页</a><a href="archive.html">目录</a></span>
+    </div>
+  </header>
+
+  <nav class="pagenav">
+    <div class="datechip">2026 年 11 月 28 日<small>星期六</small></div>
+    <div class="pn-right">
+      <a href="2026-11-27.html">← 更早一期 · 11月27日</a>
+      <span class="disabled">已是最新 →</span>
+      <a href="archive.html">全部期数 →</a>
+    </div>
+  </nav>
+
+  
+
+  <section class="summary">
+    <div class="label">今 日 速 览</div>
+    <p>智元产线方案获联合国奖，资本与模型同日押注可部署环节。 高交会闭幕把意向成交额写到 1750 亿元，机器人从展台转向可验收工位：智元精灵 G2 进入精密装配，物流分拣成具身必争战场，自变量方案走进马来西亚邮政。同一天，RLE 给九款旗舰模型的具身操控打出 0 分，六项人形机器人国标条款获解读，融资额较 6 月高点回落近六成；主线由演示能力切换到工位交付与可比尺子。</p>
+    <div style="margin-top:10px;font-size:11.5px;color:var(--ink-3)">关键词 · 订单与量产 · 2026-11-27（维也纳颁奖与智元披露） · 融资 · 2026-11-27（公司宣布） · 产品发布 · 2026-11-27（广州车展开幕与官方新闻稿）</div>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-panel="morning" role="tab">早班快讯<span class="num">12</span></button>
+    <button class="tab" data-panel="evening" role="tab">晚班全景<span class="num">28</span></button>
+    <button class="tab" data-panel="qa" role="tab">热点问答<span class="num">3</span></button>
+    <button class="tab" data-panel="verify" role="tab">核实与跟踪<span class="num">14</span></button>
+  </div>
+
+  <section class="panel active" id="panel-morning">
+    <div class="sec-intro"><span class="big">早班快讯</span><span class="sub">具身智能领域，隔夜与今晨的重要动态</span><span class="rule"></span></div>
+    
+    <article class="news">
+      <div class="idx">01</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（维也纳颁奖与智元披露）</span>
+        <h3>智元精灵 G2 产线方案获联合国&quot;可部署解决方案奖&quot;，部署从质检上下料扩至喇叭 BOX 精密装配</h3>
+        <p>北京时间 11 月 27 日，2026 年可持续工业 AI 解决方案全球征集颁奖仪式在维也纳国际中心举行，智元凭&quot;精灵 G2 人形机器人产线上下料方案&quot;获具身智能、工业机器人与智能制造赛道&quot;可部署解决方案奖&quot;。该征集由联合国工业发展组织、世界机器人合作组织、联合国贸发会议、联合国数字与新兴技术办公室、国际电信联盟及联合国发展协调办公室共同发起，&quot;可部署&quot;评审的是已具备在新区域开展试点部署条件的方案，不等于大规模商业化落地。在龙旗科技南昌制造中心，多台 G2 接入平板电脑量产线承担测试工位上下料与分拣，近期从质检上下料延伸至喇叭 BOX 安装并实现并线生产；蓝思科技数十台已部署于手机测试产线，长电科技上海临港汽车电子工厂首批完成芯片测试产线并线试运行。官方称今年 6 月直播作业成功率 99.99%，为质检工段阶段数据，精密装配环节良率与节拍未披露。 【关注点】奖项标尺从&quot;能不能演示&quot;转向&quot;能不能换地方复制&quot;，且落点是真实量产线；但 99.99% 是 6 月质检工段的厂商口径，装配环节没有可比数据。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.qq.com/rain/a/20261127A0HC0X00" target="_blank" rel="noopener noreferrer">腾讯新闻·东方网（11-27）</a>、<a href="https://finance.sina.com.cn/jjxw/2026-11-27/doc-inkaewtz3087161.shtml" target="_blank" rel="noopener noreferrer">新浪财经（11-27）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzkwNzUyMjY2Ng==&amp;mid=2247511368&amp;idx=1&amp;sn=24f2bc5f792f4dcd233156862462c6c7&amp;chksm=c1dfd1560694bd7d253783cd4cb61d937712fa5d00de2c052a9c30955468e485d02e151e6498#rd" target="_blank" rel="noopener noreferrer">智元官方公众号（11-27）</a></span><span class="tag">订单与量产</span><span class="tag">2026-11-27（维也纳颁奖与智元披露）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">02</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（公司宣布）</span>
+        <h3>零次方机器人完成数亿元新融资，年内累计融资超 3 亿元</h3>
+        <p>11 月 27 日，合肥零次方机器人宣布完成新一轮数亿元融资，投资方包括清科产投、锡洲国际、卓源亚洲、粤民溯锋、无锡滨湖、合肥建投、合肥产投国正、杰克集团及多家产业战略投资方，老股东同创伟业、力合基金、接力天使超额加注；资金主要用于扩充已跑通场景的落地规模，并为年底计划开放的 Picking API 储备算力调度能力。公司由清华大学与江淮前沿技术协同创新中心联合孵化，R 系列拣选机器人 R1 已在合肥一处即时零售前置仓作业；公司披露月产能突破 100 台、2025 年订单金额过亿元、2026 年订单目标 2 亿元，均为企业口径。创始人称前置仓&quot;全国首个常态化履约&quot;及每台每天至少 1500 次任务，目前均为公司访谈口径，无独立验收记录。 【关注点】资金绕开展台演示、流向前置仓拣选这类可计价场景；但月产能、订单目标与日任务次数都是厂商口径，需以后续订单和验收核对。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.qq.com/rain/a/20261127A08LK500" target="_blank" rel="noopener noreferrer">腾讯新闻·观点网（11-27）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzY4ODUxNDY3MQ==&amp;mid=2247489012&amp;idx=1&amp;sn=de62ac84d6b362cfbaa8662683b21701&amp;chksm=f2397c42109f910cb8265a9ff0384019792bdbb9d91f430a3214c9339e86eafca9072b0f5218#rd" target="_blank" rel="noopener noreferrer">人形机器人简报（11-28）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzI2OTU5OTczNQ==&amp;mid=2247484899&amp;idx=1&amp;sn=b5b7bb1436eff3327e3d8b8750273fe7&amp;chksm=ebc0c8b37345fd2bff1e07664d10efb0e6e5bb40b5cca2e4b5cd9818d82c4b8208fcadf615f6#rd" target="_blank" rel="noopener noreferrer">具身前沿晨报（11-28）</a></span><span class="tag">融资</span><span class="tag">2026-11-27（公司宣布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">03</div>
+      <div>
+        <span class="cat cat-产品发布">产品发布</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（广州车展开幕与官方新闻稿）</span>
+        <h3>小鹏 8 台 IRON 在广州车展顶岗，新增 2027 年下半年全球上市时间表</h3>
+        <p>11 月 27 日广州车展开幕，小鹏官方新闻稿称 8 台 IRON 在 17.2 馆展台承担迎宾、导览与车辆讲解，并继 11 月 25 日科技日后再次登台演讲。新闻稿沿用 2027 年 1 月进入硬件量产、一季度以导购身份进部分门店实习、二季度向商业客户发布的时间表，新增&quot;2027 年下半年全球上市&quot;表述；副董事长顾宏地此前受访称售价可能接近电动汽车中位售价，为计划与预估口径。小鹏同时宣布在香港科学园成立研发中心，方向为机器人与通用智能。展台服务不等于一季度计划中的门店实习，更非已量产交付。 【关注点】全尺寸人形首次给出可与电动车对标的价格锚点，并把全球上市写进正式新闻稿；但当前 8 台仍是展台服务，与门店实习和量产交付不是同一阶段。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.xiaopeng.com/news/company_news/5627.html" target="_blank" rel="noopener noreferrer">小鹏官方新闻稿（11-27）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzY4ODUxNDY3MQ==&amp;mid=2247489012&amp;idx=1&amp;sn=de62ac84d6b362cfbaa8662683b21701&amp;chksm=f2397c42109f910cb8265a9ff0384019792bdbb9d91f430a3214c9339e86eafca9072b0f5218#rd" target="_blank" rel="noopener noreferrer">人形机器人简报（11-28）</a>、<a href="https://news.qq.com/rain/a/20261127A07L0400" target="_blank" rel="noopener noreferrer">腾讯新闻（11-27）</a></span><span class="tag">产品发布</span><span class="tag">2026-11-27（广州车展开幕与官方新闻稿）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">04</div>
+      <div>
+        <span class="cat cat-技术">技术论文</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（发布与开源）</span>
+        <h3>蚂蚁灵波发布 LingBot-Map 2.0 并开源导航模型 LingBot-Navi，长轨迹误差降约 85%</h3>
+        <p>11 月 27 日，蚂蚁灵波发布流式三维重建模型 LingBot-Map 2.0，并开源带空间记忆的导航模型 LingBot-Navi。2.0 通过几何上下文重塑（GCR）在模型内部改写空间记忆、修正长距离漂移，无需外接位姿图优化后端。官方数据在最长 5.2 公里、近 1.9 万帧的 VBR 城市长轨迹上，平均轨迹误差从 1.0 版的 31.12 米降至 4.72 米，降幅近 85%，优于通稿所列的外部回环方案 9.98 米；单张 RTX 5090 推理速度 27.51 帧/秒。LingBot-Navi 在 GOAT-Bench 子集成功率 68.60%，比六个对比方法最高值高 10.36 个百分点，同步开放 511 个真实采集场景数据集。需注意：4.72 米是启用 GCR 后的公开数据集成绩，当前开源的是技术报告中的几何流式基础模型，不含 GCR 模块；导航成绩为闭环仿真评测，非门店或园区在岗记录。 【关注点】把&quot;建图纠偏&quot;做进模型内部记忆，指向机器人跨任务复用的导航能力；但开源内容与出成绩的版本并不相同，引用数字时须带限定条件。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://tech.ifeng.com/c/8yOWLKtS27Y" target="_blank" rel="noopener noreferrer">凤凰网科技（11-27）</a>、<a href="https://news.qq.com/rain/a/20261127A05GH000" target="_blank" rel="noopener noreferrer">腾讯新闻（11-27）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzYyNDMzODgwNA==&amp;mid=2247491393&amp;idx=1&amp;sn=666d3b13cbc2c722f0749bab4f8d5cd4&amp;chksm=f1bd076cbf6fc40d44065968dea2b68626b1a80be6a17cb09da48c48446eac5c055308ad35c8#rd" target="_blank" rel="noopener noreferrer">蚂蚁灵波官方公众号（11-27）</a></span><span class="tag">技术论文</span><span class="tag">2026-11-27（发布与开源）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">05</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-26（论坛演讲；11-27 刊载与集中披露）</span>
+        <h3>优必选披露柳州万台级产能工厂与富奥 99.95% 拆码垛精确率，预告 Walker S3</h3>
+        <p>11 月 26 日高交会中国高新技术论坛上，优必选机器人副总工程师张伟杰披露具身智能落地进展，11 月 27 日刊载：在富奥集团，工业人形机器人已上岗汽车拆码垛，位置精确率达 99.95%；在柳州与西门子联合打造的超级智慧工厂，按生产设计节拍每 10 分钟可下线一台机器人，公司称为全球首个万台级产能工业人形机器人工厂，实现&quot;机器人制造机器人&quot;；三一重能风电装备制造场景已上岗，近期将发布 Walker S3。技术侧称 Thinker 系统与通用大模型结合后 token 消耗可降至原先的 20%。上述精确率、节拍与产能均为企业演讲口径，未披露独立验收、实际产量与订单台数。 【关注点】精确率与节拍开始替代演示视频成为工业场景考核指标；但万台级产能与 10 分钟节拍均为设计口径，实际排产与交付仍需验证。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://finance.sina.com.cn/roll/2026-11-27/doc-inkaefwe7876004.shtml" target="_blank" rel="noopener noreferrer">新浪财经·演讲实录（11-27）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzY5MzQ5Njg0Mw==&amp;mid=2247483841&amp;idx=1&amp;sn=0be00a725d9ba1564ea6fff6e020cc3c&amp;chksm=f5be14207eb23f2bbd05fe1c894f04f75192f8bb7431b58f4eab8371738fd9efdeb82f1b2df0#rd" target="_blank" rel="noopener noreferrer">AI 制造早报（11-28）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzYyMjk5MDUxNQ==&amp;mid=2247483931&amp;idx=1&amp;sn=f56399c8c86e24da763ecd4ea577cc71&amp;chksm=fe647a489890fb8d4579a6bb99cae301c832a7f858beabdf42f44a2a25f0855755642a7b4833#rd" target="_blank" rel="noopener noreferrer">星际动力产业周报（11-27）</a></span><span class="tag">订单与量产</span><span class="tag">2026-11-26（论坛演讲；11-27 刊载与集中披露）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">06</div>
+      <div>
+        <span class="cat cat-技术">技术论文</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（正式发布）</span>
+        <h3>小米发布世界模型 2.0，汽车与机器人共用一套架构</h3>
+        <p>11 月 27 日，小米汽车正式发布 Xiaomi Auto World Model 2.0，面向真实驾驶与具身智能，用同一套架构处理汽车与机器人场景，支持 1 至 7 路摄像头输入，训练语料规模 1260 万段视频片段。架构引入视图—时间注意力与 WorldRec 2.0 三维重建模块，门控线性注意力使单层注意力计算速度提升至 7.15 倍、因果生成模块提速 3.72 倍（官方测试口径）。官方公布的 1000 个闭环仿真场景中，接入该世界模型的方案碰撞率 0.4%、对比方案 1.2%，场景完成率 96.3% 对 95.2%；LIBERO Plus 机器人策略加权平均成功率 75.0%。已交付超 20 万 clips 合成数据用于感知模型训练。仿真碰撞率不等于真机事故率，1260 万段视频的来源与授权细节未披露。 【关注点】车厂把仿真与生成管线摊给机器人用，从零搭训练环境的成本可能被摊薄；但所有成绩均为官方仿真与基准口径，不能直接外推到真机作业。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.qq.com/rain/a/20261127A0DEW700" target="_blank" rel="noopener noreferrer">腾讯新闻·凤凰网科技（11-27）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzUxMDQxMDMyNg==&amp;mid=2247520896&amp;idx=1&amp;sn=eb12dadc2aaedccc7c491ac0cda228a9&amp;chksm=f8f87a34a0fe91364edc83a331f63712e35e2e6cc407228a1dfb00b2f36fe07f1817fb014901#rd" target="_blank" rel="noopener noreferrer">小米汽车官方公众号（11-27）</a>、<a href="https://arxiv.org/abs/2611.01677" target="_blank" rel="noopener noreferrer">技术报告（arXiv）</a></span><span class="tag">技术论文</span><span class="tag">2026-11-27（正式发布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">07</div>
+      <div>
+        <span class="cat cat-产品发布">产品发布</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27 傍晚（官方发布）</span>
+        <h3>宇树发布全身实时遥操&quot;身外化身 V3.0 守护&quot;，最低端到端延时 80 毫秒</h3>
+        <p>11 月 27 日傍晚，宇树科技发布全身实时遥操作系统&quot;身外化身 V3.0 守护&quot;，官方指标为最高同步率 99.8%、最低端到端延时 80 毫秒，可用于远程复杂作业与真机数据采集，并提示安全使用。官方演示视频中，操作员通过带传感器的束带与触控手套驱动机器人完成击打、奔跑、翻转等动作。同步率的计算方法、测试本体、样本次数、配套设备与售价均未公布；另有报道指出标准模式约 100 毫秒、动态模式 80 毫秒且同步率降至 99.5%，该分模式口径仅见二手转述。 【关注点】遥操仍是人留在回路里的路线，但 80 毫秒延迟直接影响示范采集效率与远程作业体验；测试口径缺失使数字暂不可横向比较。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.cls.cn/detail/2547022" target="_blank" rel="noopener noreferrer">财联社·科创板日报（11-27）</a>、<a href="https://finance.eastmoney.com/a/202611273941952475.html" target="_blank" rel="noopener noreferrer">东方财富（11-27）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzI2OTU5OTczNQ==&amp;mid=2247484899&amp;idx=1&amp;sn=b5b7bb1436eff3327e3d8b8750273fe7&amp;chksm=ebc0c8b37345fd2bff1e07664d10efb0e6e5bb40b5cca2e4b5cd9818d82c4b8208fcadf615f6#rd" target="_blank" rel="noopener noreferrer">具身前沿晨报（11-28）</a></span><span class="tag">产品发布</span><span class="tag">2026-11-27 傍晚（官方发布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">08</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（监管清单公开；申报日 11-23）</span>
+        <h3>特斯拉收购德国机床厂 EMAG 部分资产的申报公开，剑指 Optimus 精密齿轮产能</h3>
+        <p>11 月 27 日，德国联邦卡特尔局公开并购审查清单，特斯拉与 EMAG 集团资产收购案号 B5-132/26、申报日 11 月 23 日，标的涵盖精密金属零件制造系统、电化学加工与激光加工设备。EMAG 位于斯图加特附近萨拉赫，其设备用于制造人形机器人手指微型齿轮与驱动关节的核心部件。文件未披露交易价格、具体收购业务范围与特斯拉买方实体；马斯克此前在电话会上称定制齿轮是可靠性瓶颈、手部是主要硬件挑战。当地媒体报道约 220 名员工可能转入特斯拉，属报道而非双方确认。按德国规则，一阶段审查约在 12 月 23 日前后出结果；特斯拉与 EMAG 均未公开置评。 【关注点】整机厂开始向上游机床与工艺整合，瓶颈从&quot;能不能造出来&quot;转向&quot;能不能一致地批量造出来&quot;；但资产范围、金额与员工转移都未获双方确认。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.qq.com/rain/a/20261127A0HTL600" target="_blank" rel="noopener noreferrer">腾讯新闻（11-27）</a>、<a href="https://therobotdaily.com/tesla-emag-asset-acquisition-filing" target="_blank" rel="noopener noreferrer">The Robot Daily（11-27）</a>、<a href="https://news.qq.com/rain/a/20261128A0017Z00" target="_blank" rel="noopener noreferrer">腾讯新闻·深度梳理（11-28）</a></span><span class="tag">订单与量产</span><span class="tag">2026-11-27（监管清单公开；申报日 11-23）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">09</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（集中披露；公告称&quot;近日&quot;完成）</span>
+        <h3>博登智能完成数亿元 B 轮融资，押注评测驱动的数据生产闭环</h3>
+        <p>11 月 27 日多家媒体披露，宁波博登智能科技有限公司宣布完成数亿元 B 轮融资，由金雨茂物、甬元基金、粤科创投、招商致远资本、招证投资、宁波高新区科创基金共同参与，资金用于评测验证生态共建、全模态采集体系迭代与数据生产平台工程化升级。公司定位 Physical AI 中立第三方基础设施、不自研机器人本体，构建&quot;采集—标注—评测—定向数据再生产&quot;闭环；称自动驾驶数据产线人工介入率已降至 1%，具身智能业务已量产 8 大类采集范式。今年 6 月已完成数亿元 A+ 与 A++ 轮。原始通稿仅提及&quot;本轮领投机构&quot;未具名，不作单一领投认定。 【关注点】数据服务商开始以&quot;评测—失败归因—定向采集&quot;闭环定价，反映具身竞争重心从参数转向可复现验证；但金额仅为数亿元区间，具体数额与估值未披露。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.qq.com/rain/a/20261127A08O0U00" target="_blank" rel="noopener noreferrer">腾讯新闻·IPO 早知道（11-27）</a>、<a href="https://www.iheima.com/article-404790.html" target="_blank" rel="noopener noreferrer">i 黑马（11-27）</a>、<a href="https://www.163.com/dy/article/LCOB46BS05198R3E.html" target="_blank" rel="noopener noreferrer">网易（11-27）</a></span><span class="tag">融资</span><span class="tag">2026-11-27（集中披露；公告称&quot;近日&quot;完成）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">10</div>
+      <div>
+        <span class="cat cat-政策">政策标准</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（报道；名单&quot;近日&quot;公布）</span>
+        <h3>杭甬绍台机器人集群入选 2026 年国家先进制造业集群，整零配套率超 80%</h3>
+        <p>11 月 27 日人民网浙江频道报道，工信部近日公布 2026 年国家先进制造业集群名单，杭州、宁波、绍兴、台州协同打造的杭甬绍台机器人集群上榜。报道称该集群已建成全国规模最大、链条最完整的机器人产业体系，整零配套率超过 80%，人形和四足机器人出货量居全球第一。四城分工为杭州&quot;智能大脑与新型本体&quot;、宁波&quot;躯干制造+整机集成&quot;、台州&quot;精密关节+解决方案&quot;、绍兴关键部件与核心材料配套；绍兴五洲新春的反向行星滚柱丝杠已进入批量供货阶段。上虞另亮出总规模 30 亿元的&quot;城市机会清单&quot;，含六大板块 130 余条场景需求与 60 余项本地技术供给——30 亿元为采购与投资总额，不是补贴额。 【关注点】集群把四城分工写到环节级别，配套半径缩短有利于整机降本；但出货量全球第一与配套率数据来自报道口径，30 亿元机会清单需区分采购投资与财政补贴。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://zj.people.com.cn/n2/2026/1127/c186327-41762394.html" target="_blank" rel="noopener noreferrer">人民网浙江频道（11-27）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzY4ODUxNDY3MQ==&amp;mid=2247489012&amp;idx=1&amp;sn=de62ac84d6b362cfbaa8662683b21701&amp;chksm=f2397c42109f910cb8265a9ff0384019792bdbb9d91f430a3214c9339e86eafca9072b0f5218#rd" target="_blank" rel="noopener noreferrer">人形机器人简报（11-28）</a></span><span class="tag">政策标准</span><span class="tag">2026-11-27（报道；名单&quot;近日&quot;公布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">11</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（大会现场报道）</span>
+        <h3>IDEA 大会 SUDO 机器人进入新能源电池产线场景交付，视启未来攻长尾抓取</h3>
+        <p>11 月 27 日证券时报报道，2026 粤港澳大湾区数字经济研究院（IDEA）大会上，SUDO 机器人现场演示夹取 U 盘、翻转并对准插入插槽一次到位；公司现场负责人称其已在新能源电池产线进入场景交付阶段，并推进向汽车电子等制造场景拓展。视启未来展示视觉原生具身大脑在垃圾清理场景的应用，可识别光滑易碎的鸡蛋、高反光透明瓶、压扁易拉罐与不规则纸团并自主规划抓取路径；张磊团队还展示纯视觉裸手采集与 EgoTwin 系统，尝试从人的自然操作中提取机器人学习数据。交付台数、节拍与验收指标均未披露。 【关注点】产线&quot;场景交付&quot;比展台演示更接近工业价值，裸手采集与 EgoTwin 指向数据瓶颈；但交付规模、成功率与成本均未公开，暂不能判断复制能力。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.163.com/dy/article/LCNMMI0P053469RG.html" target="_blank" rel="noopener noreferrer">证券时报·网易转载（11-27）</a>、<a href="https://www.itbear.com.cn/html/2026-11/1599091.html" target="_blank" rel="noopener noreferrer">ITBear（11-27）</a></span><span class="tag">订单与量产</span><span class="tag">2026-11-27（大会现场报道）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">12</div>
+      <div>
+        <span class="cat cat-政策">政策标准</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-26（印发；11-27 集中报道）</span>
+        <h3>广东印发算力发展&quot;十五五&quot;规划，为具身智能超前布局重大算力设施</h3>
+        <p>11 月 26 日下午，广东省政务服务和数据管理局、广东省发改委印发《广东省算力发展&quot;十五五&quot;规划》，11 月 27 日公开报道。规划明确到 2028 年智算规模突破 1000 EFlops（FP16）、数据中心绿电使用占比超 80%；到 2030 年全域智算规模超 2500 EFlops、力争 4000 EFlops。围绕量子科技、脑机接口、具身智能等未来产业，适度超前谋划布局一批重大算力设施；鼓励算力中心优先使用国产算力芯片，推进国家数据基础设施（广东）区域功能节点建设。文件落款为 2026 年 11 月 6 日，26 日印发公开。 【关注点】具身智能被列入优先布局算力设施的未来产业，训练与仿真需求有望获得地方资源倾斜；但规划为中长期目标，具体项目清单与落地时序尚未公布。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.gd.gov.cn/gdywdt/bmdt/content/post_4985774.html" target="_blank" rel="noopener noreferrer">广东省人民政府门户网站（11-27）</a>、<a href="https://www.163.com/dy/article/LCNU9U2B05567I2C.html" target="_blank" rel="noopener noreferrer">证券时报·网易转载（11-27）</a></span><span class="tag">政策标准</span><span class="tag">2026-11-26（印发；11-27 集中报道）</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel" id="panel-evening">
+    <div class="sec-intro"><span class="big">晚班全景</span><span class="sub">当日全天新增披露与趋势观察</span><span class="rule"></span></div>
+    
+    <article class="news">
+      <div class="idx">01</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-28（闭幕）</span>
+        <h3>高交会闭幕：意向成交突破 1750 亿元，宇树、云深处机器人进行全场景动态演示</h3>
+        <p>11 月 28 日，为期三天的第二十八届中国国际高新技术成果交易会在深圳国际会展中心（宝安）闭幕。三天展期累计吸引 48 万余人次专业观众，其中国际观众超 4.5 万人次；共迎来 1365 个采购团，现场促成 570 余项供需对接与投融资对接项目签约，意向成交金额突破 1750 亿元。机器人、算力等新兴赛道亮点集中，宇树科技、云深处的人形与四足机器人进行全场景动态演示，报道称不少展品已具备产业化落地条件。1750 亿元为展会汇总的&quot;意向成交&quot;口径，与 11 月 27 日披露的 582.53 亿元&quot;采购意向&quot;统计范围不同，不可相加。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.chinanews.com.cn/cj/2026/11-28/10739365.shtml" target="_blank" rel="noopener noreferrer">中国新闻网</a>、<a href="https://news.qq.com/rain/a/20261128A0CJN300" target="_blank" rel="noopener noreferrer">腾讯新闻·深圳商报</a>、<a href="https://sz.ifeng.com/c/8yOpuasAJJR" target="_blank" rel="noopener noreferrer">凤凰网深圳</a></span><span class="tag">订单与量产</span><span class="tag">2026-11-28（闭幕）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">02</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（颁奖）／2026-11-28（披露）</span>
+        <h3>智元精灵 G2 从质检上下料延伸至喇叭 BOX 精密装配，并获&quot;可部署解决方案奖&quot;</h3>
+        <p>11 月 28 日消息，2026 可持续工业 AI 解决方案全球征集颁奖仪式 11 月 27 日在维也纳国际中心举行，智元&quot;精灵 G2 人形机器人产线上下料方案&quot;获具身智能、工业机器人与智能制造赛道&quot;可部署解决方案奖&quot;，该奖项面向已具备在新区域开展试点部署条件的方案。方案已应用于龙旗科技南昌制造中心平板电脑量产线，在测试工位自主上下料并按检测结果分拣；近期进一步承担喇叭 BOX 安装并实现并线生产，公司称同一台机器人无需定制硬件改造即可切换工序。在蓝思科技，数十台精灵 G2 已部署于手机测试产线；在长电科技上海临港汽车电子工厂，首批机器人已接入芯片测试产线并完成并线试运行。此前 6 天直播的 99.99% 任务成功率为历史口径，新工序节拍与良率未披露。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.cnstock.com/commonDetail/835204" target="_blank" rel="noopener noreferrer">上海证券报·中国证券网</a>、<a href="https://www.sh.chinanews.com.cn/swzx/2026-11-28/151566.shtml" target="_blank" rel="noopener noreferrer">中国新闻网上海</a>、<a href="https://news.qq.com/rain/a/20261128A0AQWS00" target="_blank" rel="noopener noreferrer">腾讯新闻</a></span><span class="tag">订单与量产</span><span class="tag">2026-11-27（颁奖）／2026-11-28（披露）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">03</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-28（报道发布）</span>
+        <h3>物流分拣成具身&quot;必争之地&quot;，知情人士称多家头部企业已签亿元级订单</h3>
+        <p>11 月 28 日 12:13 刊发的调查报道称，多位业内人士把物流分拣视为具身智能商业化的核心战场，顺丰是这一场景最大的买方和试验田。据接近顺丰人士透露，今年具身企业在顺丰的商业化落地规模可能达到数亿元，自变量和星动纪元分别为前两名方案供应商。公开口径显示，星动纪元与中国邮政、顺丰合作已进驻全国 5 省市 10 余个物流中心，分拣效率超过 1500 件/小时；自变量对外直播复刻顺丰物流分拣线为 1911 件/小时。亿元级订单、供应商排名与&quot;可能达数亿元&quot;均为知情人或厂商口径，合同主体、金额与验收数据未见公司公告。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://finance.sina.com.cn/tech/shenji/2026-11-28/doc-inkahepn5035640.shtml" target="_blank" rel="noopener noreferrer">新浪财经·BUG 栏目</a>、<a href="https://new.qq.com/rain/a/20261128A08AOD00" target="_blank" rel="noopener noreferrer">腾讯网转载</a>、<a href="https://www.itbear.com.cn/html/2026-11/1601453.html" target="_blank" rel="noopener noreferrer">ITBear</a></span><span class="tag">订单与量产</span><span class="tag">2026-11-28（报道发布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">04</div>
+      <div>
+        <span class="cat cat-订单量产">订单与合作</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-24（签约）／2026-11-28（细节披露）</span>
+        <h3>自变量×马来西亚国家邮政合作细节披露：签约前已小规模验证，称仅需 10 小时产线数据上手</h3>
+        <p>11 月 28 日详细披露显示，自变量 11 月 24 日在吉隆坡与马来西亚国家邮政签署合作备忘录，签约前其机器人已在马国邮主要分拣中心完成小规模部署，并用真实流转包裹进行初步验证。马国邮拥有逾 3000 个站点、覆盖逾 1100 万个物流地址。公司称最新一代通用具身模型部署到产线后仅需约 10 小时产线数据即可学会工序，迁移到其他站点仍能保持 90% 以上分拣效率；采用摄像头、双机械臂与标准夹爪的方案整体硬件成本较海外同类方案降低约 70%。此前公开挑战结果为 5 小时 14 分钟处理 1 万件包裹、平均 1911 件/小时。效率、成本降幅与&quot;有望成为全球商业化落地规模最大&quot;均为公司口径，合作备忘录并非采购合同。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://m.21jingji.com/article/20261128/herald/6c5f748bd51a03920eb8127e1947ea17.html" target="_blank" rel="noopener noreferrer">21 财经</a>、<a href="https://k.sina.com.cn/article_1651428902_626ece2602001m2r1.html?kdurlshow=1" target="_blank" rel="noopener noreferrer">新浪转载</a></span><span class="tag">订单与合作</span><span class="tag">2026-11-24（签约）／2026-11-28（细节披露）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">05</div>
+      <div>
+        <span class="cat cat-产品发布">产品发布</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（披露）／2026-11-28（集中报道）</span>
+        <h3>跃灵智伴完成超千万元天使轮，首款守护机器人计划 12 月 1 日京东预售</h3>
+        <p>11 月 27 日至 28 日多家媒体报道，北京跃灵智伴完成超千万元天使轮融资，出资方为一家长期布局养老赛道的科技公司，具体金额与名称未披露。首款产品&quot;跃小灵&quot;是轮式家庭守护机器人而非双足人形，面向独居、空巢老人，覆盖跌倒、火情、漏水告警、健康监测与语音交互，已在北京多户家庭完成多轮小批量入户测试。公司计划 2026 年 12 月 1 日在京东开启预售、2027 年一季度发货；另有渠道口径给出 7999 元起售价与首年 1000 台目标。预售、发货、价格与销量目标均为计划或渠道口径，尚无交付记录。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.gkzhan.com/news/detail/197864.html" target="_blank" rel="noopener noreferrer">智能制造网·融资周报</a>、<a href="https://robot.ofweek.com/2026-11/ART-8321203-12005-30713980.html" target="_blank" rel="noopener noreferrer">具身涌现（OFweek）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzYzNzI3ODg2OQ==&amp;mid=2247510921&amp;idx=1&amp;sn=02955d992772081ba6387cc49b8a068e" target="_blank" rel="noopener noreferrer">计图机器人（微信）</a></span><span class="tag">产品发布</span><span class="tag">2026-11-27（披露）／2026-11-28（集中报道）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">06</div>
+      <div>
+        <span class="cat cat-产品发布">产品发布</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-28（日报披露；展会期间）</span>
+        <h3>柳工与网易灵动展示 922FE 具身智能无人电动挖掘机，工程机械走&quot;专用本体＋具身算法&quot;路线</h3>
+        <p>11 月 28 日行业日报收录，柳工与网易灵动在 bauma China 展示 922FE 具身智能无人电动挖掘机，代表&quot;专用工程机械＋具身算法&quot;路径。展会演示与矿山、工地的规模部署之间，仍需验证粉尘、震动、通信中断与安全责任链；报道未给出部署台数、订单金额与连续作业时长。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="http://mp.weixin.qq.com/s?__biz=MzY5ODQ0Mzk0Ng==&amp;mid=2247484225&amp;idx=2&amp;sn=23bf4419988b992d1efe1cc97f13b942" target="_blank" rel="noopener noreferrer">每日机器人行业洞察（微信）</a>、<a href="https://opentrends.io/trends/embodied/2026-11-28" target="_blank" rel="noopener noreferrer">OpenTrends 摘要</a></span><span class="tag">产品发布</span><span class="tag">2026-11-28（日报披露；展会期间）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">07</div>
+      <div>
+        <span class="cat cat-财经">财报数据</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-25（财报）／2026-11-28（行业解读）</span>
+        <h3>机器人激光雷达成利润主要来源：速腾聚创三季度销量 14.52 万台，同比增 309%</h3>
+        <p>11 月 28 日新华财经报道，速腾聚创 11 月 25 日披露三季报，第三季度用于机器人及其他领域的激光雷达销量 14.52 万台、同比增长 309%，前三季度 42.78 万台、同比增长 423%；机器人产品收入已接近产品收入一半，并成为产品毛利润主要来源。公司称面向通用人工智能研发和人形机器人应用的空间相机已进入硅谷多家 AI 企业供应链，与北美头部大模型公司及全球领先人形机器人企业展开合作，产品获多家头部客户测试验证；此前计划第三季度末启动交付、2027 年全面量产。空间相机客户匿名，订单金额未披露。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.cnfin.com/gs-lb/detail/20261128/4501687_1.html" target="_blank" rel="noopener noreferrer">新华财经</a>、<a href="https://www.cnr.cn/tech/gstj/20261128/t20261128_527885889.shtml" target="_blank" rel="noopener noreferrer">央广网</a></span><span class="tag">财报数据</span><span class="tag">2026-11-25（财报）／2026-11-28（行业解读）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">08</div>
+      <div>
+        <span class="cat cat-技术">零部件</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-28（集中披露）</span>
+        <h3>禾赛三季度机器人动力模组交付 2.34 万套环比增 96.8%，绿的谐波人形订单约 40 万台套</h3>
+        <p>11 月 28 日新华财经与甲子光年梳理分别披露，禾赛科技三季度机器人动力模组交付量 2.34 万套、环比增长 96.8%，全身关节模组已进入量产环节，公司口径称逾五成收入来自非乘用车领域；零差云控关节模组累计产量越过 10 万台；绿的谐波前三季度人形相关订单约 40 万台套，月产能计划由 5 万台提升至年底 12 万台。三组数字均为企业披露或第三方机构梳理口径，未见客户与验收明细，12 万台为计划产能。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.cnfin.com/gs-lb/detail/20261128/4501687_1.html" target="_blank" rel="noopener noreferrer">新华财经</a>、<a href="https://www.163.com/dy/article/LCPGCUKT0512MLBG.html" target="_blank" rel="noopener noreferrer">甲子光年（网易）</a></span><span class="tag">零部件</span><span class="tag">2026-11-28（集中披露）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">09</div>
+      <div>
+        <span class="cat cat-技术">数据</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（报道）／时间待确认（实际启用日）</span>
+        <h3>天津南开具身智能应用中试基地一期投用，配置 140 套多模态灵巧手数据采集设备</h3>
+        <p>11 月 27 日《今晚报》报道、11 月 28 日行业晨报收录，天津南开区具身智能应用中试基地一期已建成投用，配置 140 套多模态灵巧手数据采集设备，由南开启航、开普云、灵心巧手分别参与运营、数据服务与设备供给，提供灵巧操作采集和验证条件。报道未给出累计采集时长、客户使用数量或对外开放的数据规模，实际启用日未单列。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.wicongress.org.cn/zbh/system/2026/11/27/030003504.shtml" target="_blank" rel="noopener noreferrer">今晚报·世界智能产业博览会</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzU2MTczODYyMA==&amp;mid=2247483977&amp;idx=1&amp;sn=b0aceca30f18e8921c8975b6526ccb92" target="_blank" rel="noopener noreferrer">具身智能早报（微信）</a></span><span class="tag">数据</span><span class="tag">2026-11-27（报道）／时间待确认（实际启用日）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">10</div>
+      <div>
+        <span class="cat cat-技术">零部件</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-28（披露）</span>
+        <h3>睿尔曼与君正发布末端控制方案，基于 M7000 系列芯片面向灵巧手与夹爪</h3>
+        <p>11 月 28 日行业日报披露，睿尔曼与君正宣布基于君正 M7000 系列芯片开发机器人末端执行器控制与运动控制方案，指向灵巧手、夹爪等本地实时控制场景。此次为产品方案发布与合作签约，尚未披露客户导入量、批量出货与实测时延。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="http://mp.weixin.qq.com/s?__biz=MzY5ODQ0Mzk0Ng==&amp;mid=2247484225&amp;idx=2&amp;sn=23bf4419988b992d1efe1cc97f13b942" target="_blank" rel="noopener noreferrer">每日机器人行业洞察（微信）</a></span><span class="tag">零部件</span><span class="tag">2026-11-28（披露）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">11</div>
+      <div>
+        <span class="cat cat-技术">零部件</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-25（宣布）／2026-11-28（周报）</span>
+        <h3>新泉机器人战略入股长坂科技取得 5% 股权，切入反向式行星滚柱丝杠</h3>
+        <p>11 月 28 日融资周报回顾，长坂科技 11 月 25 日宣布完成新一轮战略融资，新泉机器人以战略投资者身份入股并取得 5% 股权，投资金额未披露。长坂成立于 2022 年，研发人形机器人精密减速器、行星滚柱丝杠及数控机床关键零部件；公司称已建成国内首条高精度反向式行星滚柱丝杠磨削量产线、具备年产 3 万套稳定产能，已向 20 余家企业送样试用并实现小批量供货。产能与客户数为公司口径。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.gkzhan.com/news/detail/197864.html" target="_blank" rel="noopener noreferrer">智能制造网·融资周报</a>、<a href="http://auto.cnfol.com/cheshidongtai/20261128/32434649.shtml" target="_blank" rel="noopener noreferrer">中金在线汽车</a></span><span class="tag">零部件</span><span class="tag">2026-11-25（宣布）／2026-11-28（周报）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">12</div>
+      <div>
+        <span class="cat cat-技术">技术论文</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-28（发布）</span>
+        <h3>Robots&#39; Last Exam 正式发布：九款前沿模型具身操控完整工作流完成率为 0</h3>
+        <p>11 月 28 日，Robots&#39; Last Exam（RLE）正式面向公众发布，首批 10 个真实工作场景覆盖做奶茶、打咖啡、收银扫码等完整工作流，不给分步指令、只看最终交付。首轮 8 个场景、16 项工作流的双组对照显示：卸下机械臂关节与底盘限制的 Agent Mode 下，Claude Fable 5.2 完成 5 项、成功率 31.25%，Opus 5.5 完成 2 项，GPT-6.2 Astra 完成 1 项；装入仿真移动双臂机器人 Astribot S1 的 Embodied Mode 下，9 款模型全部为 0。80 项独立子任务中 Opus 5.5 完成 48.75%。三项仿真与真机配对实验的整体成功率为 85.6%，差距在 8 至 13 个百分点。首轮成绩为仿真评测口径，项目已开放社区共建。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://tech.sina.cn/2026-11-28/detail-inkaftxm0759399.d.html" target="_blank" rel="noopener noreferrer">新浪科技</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&amp;mid=2651076793&amp;idx=2&amp;sn=741fef42061cef1c7d2a1166792fdf50&amp;chksm=85923d031b9e43aacffa0d80fdb807a5c9d73d7330e7bef5cdd8d196901a49508fce05289844" target="_blank" rel="noopener noreferrer">机器之心（微信）</a>、<a href="https://robots-last-exam.com/" target="_blank" rel="noopener noreferrer">项目官网</a></span><span class="tag">技术论文</span><span class="tag">2026-11-28（发布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">13</div>
+      <div>
+        <span class="cat cat-技术">技术论文</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-28（报道发布）</span>
+        <h3>华威科开源 TipDex-VTLA 灵巧操作模型，四类精细操作真机平均成功率称 73.8%</h3>
+        <p>11 月 28 日科技日报报道，柔性电子皮肤企业华威科开源发布 TipDex-VTLA 灵巧操作模型，把触觉反馈贯通感知判断与动作纠偏：先判断视觉信息是否可信，再用真实触觉验证预期，光照变化或接触异常时及时介入纠偏。在搭载华威科触觉传感器的双臂灵巧手平台上，研究团队围绕四类典型精细操作开展真机评测，平均成功率 73.8%。论文、项目主页、代码、数据与模型权重已同步公开，成功率为企业研究团队报告口径。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.stdaily.com/web/gdxw/2026-11/28/content_620987.html" target="_blank" rel="noopener noreferrer">科技日报</a></span><span class="tag">技术论文</span><span class="tag">2026-11-28（报道发布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">14</div>
+      <div>
+        <span class="cat cat-技术">模型与技术</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-28（发布）</span>
+        <h3>开源鸿蒙 RoboOH 2.0 Release 在南京发布，兼容四足、轮式、双足与旋翼本体</h3>
+        <p>11 月 28 日，2026 开源鸿蒙技术大会在南京举行，开源鸿蒙具身智能操作系统 RoboOH 2.0 Release 正式发布。系统由 RoboMaestro 系统级运行底座与 RoboFrame 本体抽象层构成，采用&quot;范式无关&quot;设计，对接 ROS 2、micro-ROS、LeRobot 等框架。已面向四足、轮式、双足、旋翼等形态开展技术适配，支持的本体包括松延动力 N2、人形机器人（上海）灵龙 α、电科机器人四足机器狗、新大陆桌面双臂等；社区自 2025 年 9 月孵化以来已组建 18 个具身智能专项 SIG 工作组。所列本体为适配进展，并非批量部署清单。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.qq.com/rain/a/20261128A0D2L400" target="_blank" rel="noopener noreferrer">腾讯新闻·IT 时代网</a></span><span class="tag">模型与技术</span><span class="tag">2026-11-28（发布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">15</div>
+      <div>
+        <span class="cat cat-技术">模型与技术</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（发布）／2026-11-28（集中披露）</span>
+        <h3>蚂蚁灵波公开建图与跨任务导航双模型，5.2 公里轨迹误差称由 31.12 米降至 4.72 米</h3>
+        <p>11 月 27 日发布、11 月 28 日多家日报集中披露，蚂蚁灵波公开流式三维重建模型 LingBot-Map 2.0 与带跨任务空间记忆的导航模型 LingBot-Navi，并放出覆盖 511 个真实场景的数据集。Map 2.0 可在模型内部改写空间记忆以纠正累计漂移；厂商称在最长 5.2 公里、近 1.9 万帧的 VBR 城市轨迹上，平均轨迹误差从上一代 31.12 米降至 4.72 米，单卡 RTX 5090 推理 27.51 帧每秒。代码与部分权重已公开，Map 2.0 基础权重限非商业用途，评测结果来自厂商任务集。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://via.tt.se/pressmeddelande/4660319/robbyant-open-sources-lingbot-map-20-and-lingbot-navi-enabling-long-term-spatial-memory-and-autonomous-navigation-for-robots?lang=en&amp;publisherId=259167" target="_blank" rel="noopener noreferrer">蚂蚁灵波官方（Business Wire）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzU2MTczODYyMA==&amp;mid=2247483977&amp;idx=1&amp;sn=b0aceca30f18e8921c8975b6526ccb92" target="_blank" rel="noopener noreferrer">具身智能早报（微信）</a>、<a href="https://e-acc.ai/daily/2026-11-28" target="_blank" rel="noopener noreferrer">e/acc 摘要</a></span><span class="tag">模型与技术</span><span class="tag">2026-11-27（发布）／2026-11-28（集中披露）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">16</div>
+      <div>
+        <span class="cat cat-技术">模型与技术</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-28（报道发布）</span>
+        <h3>物理 AI&quot;补脑&quot;卡在数据与算力，真机后训练占比预计由 5%—10% 升至 20%</h3>
+        <p>11 月 28 日报道的智源 REAL 物理 AI 开放日讨论中，中科院自动化所研究员赵冬斌称真实数据训练的世界模型与真实世界差距较小，预训练可配比仿真与真实数据、后训练阶段使用高质量真机数据；光轮智能谢晨称 Astra 发布后高阶真机遥操作数据需求增长，张一鸣预计真机后训练数据比例将从今年的 5%—10% 提升至明年 20% 甚至更高，推动 VLA 向视触觉语言动作模型演化。张澄宇预计国内物理 AI 开发基础设施市场规模从 2026 年 335 亿元增至 2030 年超 800 亿元，当前支撑物理 AI 的算力约 178 EFLOPS。占比与市场规模均为受访者预测。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.cnr.cn/tech/gstj/20261128/t20261128_527885889.shtml" target="_blank" rel="noopener noreferrer">央广网</a>、<a href="https://www.itbear.com.cn/html/2026-11/1601176.html" target="_blank" rel="noopener noreferrer">ITBear</a></span><span class="tag">模型与技术</span><span class="tag">2026-11-28（报道发布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">17</div>
+      <div>
+        <span class="cat cat-科技">融资与并购</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-23（申报）／2026-11-27 至 28（披露）</span>
+        <h3>特斯拉拟收购德国机床厂 EMAG 部分资产，已进入反垄断第一阶段审查</h3>
+        <p>德国联邦卡特尔局把特斯拉收购 EMAG 集团部分资产的申报列入审查清单，案号 B5-132/26、11 月 23 日提交，目前处于第一阶段；11 月 27 日至 28 日经路透社披露后集中见报。EMAG 总部位于萨拉赫，专长加工谐波减速器柔轮、波发生器与行星齿轮等精密件，报道称其机床可把齿轮公差控制在 ISO 1328 4 级标准、跳动小于 5 微米。当地媒体称约 220 名员工可能转入特斯拉，交易价格与资产范围未公开；特斯拉拒绝置评，EMAG 未正式回应。报道将交易动机指向 Optimus 年产百万台目标下的供应链自主可控，属分析判断而非公司说明。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.qq.com/rain/a/20261128A0C95900" target="_blank" rel="noopener noreferrer">中新经纬（腾讯新闻）</a>、<a href="https://news.qq.com/rain/a/20261128A0017Z00" target="_blank" rel="noopener noreferrer">腾讯新闻深度</a>、<a href="https://thebaseprinciple.com/en/posts/tesla-plans-to-acquire-german-precision-machinery-supplier-e-73e897f3" target="_blank" rel="noopener noreferrer">The Base Principle（转述路透）</a></span><span class="tag">融资与并购</span><span class="tag">2026-11-23（申报）／2026-11-27 至 28（披露）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">18</div>
+      <div>
+        <span class="cat cat-订单量产">订单与量产</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（航拍）／2026-11-28（汇总）</span>
+        <h3>Optimus 工厂四台压铸机地基浇筑完成，观察者估算钢结构约六成</h3>
+        <p>11 月 28 日汇总的无人机航拍显示，11 月 27 日特斯拉得州奥斯汀 Optimus 工厂四处巨型压铸机地基已浇筑混凝土，观察者 Joe Tegtmeyer 估算厂房钢结构约完成 60%，并预计钢构施工在 2027 年 3 月底前后收尾。特斯拉此前季度更新称该厂在建，弗里蒙特产线已下线首台量产质量 Optimus。施工进度为第三方观察估算，非特斯拉公告。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.readmusk.com/digests" target="_blank" rel="noopener noreferrer">读懂马斯克·每日汇总</a></span><span class="tag">订单与量产</span><span class="tag">2026-11-27（航拍）／2026-11-28（汇总）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">19</div>
+      <div>
+        <span class="cat cat-产品发布">产品发布</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-26（发布）／2026-11-28（报道）</span>
+        <h3>俄罗斯 Sber 在 AI Journey 发布三款机器人，共享 GreenVLA 2.0 模型</h3>
+        <p>11 月 26 日至 28 日，俄罗斯联邦储蓄银行 Sber 在莫斯科总部举办 AI Journey 2026，11 月 28 日新华社英文报道现场展示人形机器人与人类舞者同台及机器人芭蕾项目。行业日报称 Sber 发布人形机器人 Green 2.0、运动型机器人 Yuni 和末端配送机器人，三者共享自研 GreenVLA 2.0 模型；配送机器人称已在莫斯科试点，Green 2.0 与 Yuni 目前以演示为主，尚未披露量产、付费订单和运行时长。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://english.news.cn/europe/20261128/d35e70bb54684b23afc0af45840fe316/c.html" target="_blank" rel="noopener noreferrer">新华社英文网</a>、<a href="https://www.eet-china.com/mp/a542589.html" target="_blank" rel="noopener noreferrer">电子工程专辑</a></span><span class="tag">产品发布</span><span class="tag">2026-11-26（发布）／2026-11-28（报道）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">20</div>
+      <div>
+        <span class="cat cat-订单量产">订单与合作</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-26（政府页面）／2026-11-27（企业公告）</span>
+        <h3>NEURA 与西班牙阿拉贡政府签署谅解备忘录，拟建机器人训练中心</h3>
+        <p>11 月 27 日 NEURA Robotics 公布，与西班牙阿拉贡政府及 Costa 集团签署谅解备忘录，拟建设 NEURA Gym 与配套的应用验证区。厂商称计划投资数千万欧元并由其承担主要投资角色，目标为 2027 年年中开放；阿拉贡政府页面标注 11 月 26 日当地 18:15 更新。金额为项目计划，尚未形成已完成投资，也未公布客户与验证指标。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://neura-robotics.com/neura-robotics-aragon-government-costa-group-physical-ai/" target="_blank" rel="noopener noreferrer">NEURA Robotics 官方</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzU2MTczODYyMA==&amp;mid=2247483977&amp;idx=1&amp;sn=b0aceca30f18e8921c8975b6526ccb92" target="_blank" rel="noopener noreferrer">具身智能早报（微信）</a></span><span class="tag">订单与合作</span><span class="tag">2026-11-26（政府页面）／2026-11-27（企业公告）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">21</div>
+      <div>
+        <span class="cat cat-订单量产">订单与合作</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（公布）</span>
+        <h3>马来西亚电讯与智元、Swancor 合作探索本地机器人平台</h3>
+        <p>11 月 27 日在赛城公布，马来西亚电讯（TM）宣布与智元、Swancor Advanced Material 展开合作，拟在马来西亚开发本地机器人平台，并与 Swancor 探索销售推广。备选场景包括数据中心巡检、设施管理和家庭陪伴，合作方未宣布已部署的机型或台数，仍处场景探索阶段。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://berita.rtm.gov.my/niaga/senarai-berita-niaga/senarai-artikel/tm-teroka-teknologi-robotik-termaju/" target="_blank" rel="noopener noreferrer">马来西亚 RTM 官方</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzU2MTczODYyMA==&amp;mid=2247483977&amp;idx=1&amp;sn=b0aceca30f18e8921c8975b6526ccb92" target="_blank" rel="noopener noreferrer">具身智能早报（微信）</a></span><span class="tag">订单与合作</span><span class="tag">2026-11-27（公布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">22</div>
+      <div>
+        <span class="cat cat-观点">人事观点</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（披露）／2026-11-28（集中报道）</span>
+        <h3>三星电子组建半导体工厂机器人专项团队，规划 2028 年起在产线投入</h3>
+        <p>11 月 27 日至 28 日披露，三星电子设备解决方案部门在全球制造与基础设施总管之下新设并启动机器人团队，由李锡元副社长担任负责人，负责研发适配半导体工厂的机器人技术并落地导入实际产线。规划路线为年内选定合作厂商、明年开展技术评估、2028 年起正式在产线投入机器人，多家韩国本土机器人企业正在筹备竞标合作。时间节点为规划口径，团队规模与预算未披露。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.163.com/dy/article/LCPGS2TS05383ZUN.html" target="_blank" rel="noopener noreferrer">每日芯报（网易）</a></span><span class="tag">人事观点</span><span class="tag">2026-11-27（披露）／2026-11-28（集中报道）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">23</div>
+      <div>
+        <span class="cat cat-政策">政策标准</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-09-28（发布）／2026-11-28（解读）</span>
+        <h3>首批六项人形机器人国家标准明年 4 月 1 日实施，北京人形机器人创新中心解读安全红线</h3>
+        <p>11 月 28 日北京晚报专访北京人形机器人创新中心标准负责人鄂磊，解读已正式发布、将于 2027 年 4 月 1 日起实施的首批六项人形机器人国家标准。标准由 5 项《人形机器人技术要求》系列标准与 1 项仿真测试平台规范组成，覆盖总则、环境感知、决策规划、运动控制、作业操作；运动控制部分提出机器人靠近人时建议最高步速 0.5 米/秒、基于本体传感器的高频状态更新率不低于 200 赫兹、全身运动解算周期不大于 20 毫秒、底层关节伺服控制周期宜不大于 1 毫秒。该批推荐性国标实际发布于 2026 年 9 月 28 日，当日为条款解读，不是新发布事件。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://finance.sina.cn/2026-11-28/detail-inkahkvc0574711.d.html" target="_blank" rel="noopener noreferrer">新浪财经·北京晚报</a>、<a href="https://www.163.com/dy/article/LCQVFEEU05568W0A.html" target="_blank" rel="noopener noreferrer">网易转载</a></span><span class="tag">政策标准</span><span class="tag">2026-09-28（发布）／2026-11-28（解读）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">24</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-28（报道发布）</span>
+        <h3>具身智能月度融资额较 6 月高点回落近六成，资本从&quot;本体&quot;转向&quot;大脑&quot;</h3>
+        <p>11 月 28 日《中国经营报》刊发报道，据高工机器人不完全统计，行业月度融资金额由 6 月约 350 亿元降至 7 月约 317 亿元、8 月约 257 亿元、9 月约 134 亿元，10 月回升至约 174 亿元，仍较高点下滑近六成。IT 桔子数据显示上半年融资 935 亿元、322 起，红杉中国 2 月出手 6 笔降至 10 月 1 笔，高瓴创投 4 月参与 7 笔、10 月未现身。报道称资本判断更关注商业模式、收入增长与现金流；受访者认为估值锚正从整机本体向模型与数据迁移，中国信通院报告称多数具身模型训练数据在 10 万小时以内。统计为第三方不完全口径。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://news.qq.com/rain/a/20261128A038LJ00" target="_blank" rel="noopener noreferrer">中国经营报（腾讯新闻）</a>、<a href="http://mp.weixin.qq.com/s?__biz=Mzk0MjQxMDY1Mg==&amp;mid=2247506162&amp;idx=1&amp;sn=e3c03330661c2d5fdab62af152492358" target="_blank" rel="noopener noreferrer">行业日报汇编（微信）</a></span><span class="tag">融资</span><span class="tag">2026-11-28（报道发布）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">25</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-24（宣布）／2026-11-28（报道）</span>
+        <h3>英汉思动力完成超亿元人民币 B 轮融资，投向体育机器人与海外渠道</h3>
+        <p>11 月 28 日央广网转载报道，英汉思动力宣布完成超亿元人民币 B 轮融资，投资方为国科投资，资金用于感知、控制、动力等核心技术研发迭代、产能升级扩容、体育科技市场化落地与海外渠道建设。公司成立于 2018 年，产品包括 T-APEX 训练系统与 Tenniix AI 网球机器人，口径称全球累计出货数万台、Kickstarter 众筹近百万美元。另有融资周报把宣布日记为 11 月 24 日，具体交割日未披露，出货量为公司口径。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.cnr.cn/tech/gstj/20261128/t20261128_527885902.shtml" target="_blank" rel="noopener noreferrer">央广网</a>、<a href="http://auto.cnfol.com/cheshidongtai/20261128/32434649.shtml" target="_blank" rel="noopener noreferrer">中金在线汽车·融资周报</a></span><span class="tag">融资</span><span class="tag">2026-11-24（宣布）／2026-11-28（报道）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">26</div>
+      <div>
+        <span class="cat cat-融资">融资</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（披露）／2026-11-28（集中报道）</span>
+        <h3>触觉数据基础设施公司大衍科技完成数千万元 Pre-A 轮，用于数据中心与触觉手套产线</h3>
+        <p>11 月 27 日至 28 日行业快讯披露，大衍科技近期完成数千万元 Pre-A 轮融资，由赛智伯乐领投，普华、浙商创投、浙里信等跟投，老股东浙江省科创母基金追投。资金主要用于数据中心建设与触觉手套产线搭建。轮次与金额为公司与媒体披露口径，未见工商变更或投资方公告。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.163.com/dy/article/LCPGS2TS05383ZUN.html" target="_blank" rel="noopener noreferrer">每日芯报（网易）</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzY5MTQ0MTY4OQ==&amp;mid=2247483802&amp;idx=1&amp;sn=b79e42e3069a94807a7e25a61253dbaf" target="_blank" rel="noopener noreferrer">具身智能机器人·24 小时全球动态（微信）</a></span><span class="tag">融资</span><span class="tag">2026-11-27（披露）／2026-11-28（集中报道）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">27</div>
+      <div>
+        <span class="cat cat-财经">财报数据</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-19（总部成立）／2026-11-28（报道）</span>
+        <h3>黑芝麻智能设具身智能总部，上半年相关收入 4720 万元、毛利率 94.8%</h3>
+        <p>11 月 28 日《中国经营报》报道，黑芝麻智能 11 月 19 日在深圳前海成立具身智能总部，称已与数十家国内机器人企业建立生态伙伴关系，并锁定多家头部厂商量产订单，覆盖轮式人形、四足机器狗、工业机械臂、移动底盘与割草机等品类。2026 上半年具身智能解决方案收入 4720 万元、毛利率 94.8%，但因占比不足 11%，尚难拉动整体扭亏；上半年研发开支 8.60 亿元，约为毛利 2.27 亿元的 4 倍。订单金额与客户未具名，公司整体仍处亏损。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="http://mp.weixin.qq.com/s?__biz=Mzk0MjQxMDY1Mg==&amp;mid=2247506162&amp;idx=1&amp;sn=e3c03330661c2d5fdab62af152492358" target="_blank" rel="noopener noreferrer">中国经营报（行业日报汇编转载，微信）</a></span><span class="tag">财报数据</span><span class="tag">2026-11-19（总部成立）／2026-11-28（报道）</span></div>
+      </div>
+    </article>
+    <article class="news">
+      <div class="idx">28</div>
+      <div>
+        <span class="cat cat-政策">政策标准</span>
+        <span style="font-size:11px;color:var(--ink-3);margin-left:8px">2026-11-27（公告）</span>
+        <h3>韩国就《机器人操作学习用数据集》国家标准草案征求意见，为期 60 天</h3>
+        <p>11 月 27 日韩国国家技术标准院（KATS）公开《机器人操作学习用数据集》KS 标准草案并启动为期 60 天的征求意见，草案由智能机器人标准论坛参与制定，提出数据集、场景、任务、回合、步骤五层结构，并规定数据采集、预处理、存储及不同数据流的时间对齐要求，计划在 2027 年上半年完成制定。草案尚未生效，跨本体可用性仍需验证。</p>
+        <div class="foot"><span class="src-links"><span class="src">来源 ·</span> <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156791120" target="_blank" rel="noopener noreferrer">韩国政府政策简报</a>、<a href="http://mp.weixin.qq.com/s?__biz=MzU2MTczODYyMA==&amp;mid=2247483977&amp;idx=1&amp;sn=b0aceca30f18e8921c8975b6526ccb92" target="_blank" rel="noopener noreferrer">具身智能早报（微信）</a></span><span class="tag">政策标准</span><span class="tag">2026-11-27（公告）</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel" id="panel-qa">
+    <div class="qa-wrap"><h2>热点问答</h2><div class="qa-tip">以下问答根据当日收录的内容整理。</div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q1</span>智元精灵 G2 产线方案获联合国&quot;可部署解决方案奖&quot;，部署从质检上下料扩至喇叭 BOX 精密装配，这件事具体是怎么回事？</div>
+      <div class="qa-a"><span class="an">A</span><div>北京时间 11 月 27 日，2026 年可持续工业 AI 解决方案全球征集颁奖仪式在维也纳国际中心举行，智元凭&quot;精灵 G2 人形机器人产线上下料方案&quot;获具身智能、工业机器人与智能制造赛道&quot;可部署解决方案奖&quot;。该征集由联合国工业发展组织、世界机器人合作组织、联合国贸发会议、联合国数字与新兴技术办公室、国际电信联盟及联合国发展协调办公室共同发起，&quot;可部署&quot;评审的是已具备在新区域开展试点部署条件的方案，不等于大规模商业化落地。在龙旗科技南昌制造中心，多台 G2 接入平板电脑量产线承担测试工位上下料与分拣，近期从质检上下料延伸至喇叭 BOX 安装并实现并线生产；蓝思科技数十台已部署于手机测试产线，长电科技上海临港汽车电子工厂首批完成芯片测试产线并线试运行。官方称今年 6 月直播作业成功率 99.99%，为质检工段阶段数据，精密装配环节良率与节拍未披露。 【关注点】奖项标尺从&quot;能不能演示&quot;转向&quot;能不能换地方复制&quot;，且落点是真实量产线；但 99.99% 是 6 月质检工段的厂商口径，装配环节没有可比数据。（来源：腾讯新闻·东方网（11-27）、新浪财经（11-27）、智元官方公众号（11-27））</div></div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q2</span>零次方机器人完成数亿元新融资，年内累计融资超 3 亿元，值得关注的原因是什么？</div>
+      <div class="qa-a"><span class="an">A</span><div>11 月 27 日，合肥零次方机器人宣布完成新一轮数亿元融资，投资方包括清科产投、锡洲国际、卓源亚洲、粤民溯锋、无锡滨湖、合肥建投、合肥产投国正、杰克集团及多家产业战略投资方，老股东同创伟业、力合基金、接力天使超额加注；资金主要用于扩充已跑通场景的落地规模，并为年底计划开放的 Picking API 储备算力调度能力。公司由清华大学与江淮前沿技术协同创新中心联合孵化，R 系列拣选机器人 R1 已在合肥一处即时零售前置仓作业；公司披露月产能突破 100 台、2025 年订单金额过亿元、2026 年订单目标 2 亿元，均为企业口径。创始人称前置仓&quot;全国首个常态化履约&quot;及每台每天至少 1500 次任务，目前均为公司访谈口径，无独立验收记录。 【关注点】资金绕开展台演示、流向前置仓拣选这类可计价场景；但月产能、订单目标与日任务次数都是厂商口径，需以后续订单和验收核对。（来源：腾讯新闻·观点网（11-27）、人形机器人简报（11-28）、具身前沿晨报（11-28））</div></div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-q"><span class="qn">Q3</span>今天具身智能领域，小鹏 8 台 IRON 在广州车展顶岗，新增 2027 年下半年全球上市时间表释放了什么信号？</div>
+      <div class="qa-a"><span class="an">A</span><div>11 月 27 日广州车展开幕，小鹏官方新闻稿称 8 台 IRON 在 17.2 馆展台承担迎宾、导览与车辆讲解，并继 11 月 25 日科技日后再次登台演讲。新闻稿沿用 2027 年 1 月进入硬件量产、一季度以导购身份进部分门店实习、二季度向商业客户发布的时间表，新增&quot;2027 年下半年全球上市&quot;表述；副董事长顾宏地此前受访称售价可能接近电动汽车中位售价，为计划与预估口径。小鹏同时宣布在香港科学园成立研发中心，方向为机器人与通用智能。展台服务不等于一季度计划中的门店实习，更非已量产交付。 【关注点】全尺寸人形首次给出可与电动车对标的价格锚点，并把全球上市写进正式新闻稿；但当前 8 台仍是展台服务，与门店实习和量产交付不是同一阶段。（来源：小鹏官方新闻稿（11-27）、人形机器人简报（11-28）、腾讯新闻（11-27））</div></div>
+    </div></div>
+  </section>
+
+  <section class="panel" id="panel-verify">
+    <div class="extra-box"><h4>待核实区（单一来源 / 口径未明）</h4><ol><li>**索塔无界完成数千万元天使轮**：仅见 AI 资讯早报单源汇总，称投资方为旭珂投资、浦东创投、林洋与君，已与欧洲头部商超集团达成独家合作，计划三年内在欧洲商超部署千台机器人；金额、合作方名称与&quot;独家&quot;表述均未获第二来源确认，千台为计划口径。</li><li>**大衍科技完成数千万元 Pre-A 轮**：单源汇总称赛智伯乐领投，资金用于触觉 5D-Ego 数据采集软硬件、触觉基础模型与接触力学仿真引擎；具体金额与估值待核实。</li><li>**英汉思动力完成超亿元 B 轮**：单源汇总称国科投资参与，方向为 AI 网球机器人；金额与投资方名单待核实。</li><li>**智元 I-Bot 2.0 在西门子德国安贝格工厂实测**：机械人早安日报转述 The Robot Daily，称 PIA Automation 在继电器产线实测上料工序、计划 2027 年上半年达到全面部署就绪；未见厂商或西门子一手确认，台数与节拍未披露。</li><li>**浙江人形 SPIRE 2.0 提升幅度**：11 月 25 日晚发布、11 月 27 日科技日报介绍，称真机未见任务成功率较 VLA 基线提升 25 个百分点、仿真提升 9 个百分点；绝对成功率、任务条数与对照模型均未点名，35 秒服装线节拍为 11 月上旬旧数据。</li><li>**RoboEvo 2 与 RIPPLE 论文成绩**：具身前沿晨报单源汇总称港大等团队在 LIBERO-PRO 上将单独策略成功率从 11.0% 升至 84.1%、宇树 G1-D 混合系统 95.0%；清华等团队的 RIPPLE 在弹性地面仿真中站立成功率不低于 98.7%。均为论文自报、以仿真与实验室为主，代码待公开，尚未见原始论文页面核验。</li><li>**优必选万台级产能与 10 分钟节拍**：仅见 11 月 26 日论坛演讲口径，无独立验收、实际产量、订单台数与工厂投产证明；Walker S3 为&quot;近期将发布&quot;。</li><li>**智元龙旗产线 99.99% 成功率**：为今年 6 月全透明直播阶段的厂商数据，精密装配环节的良率、节拍与连续运行时长未披露，奖项与&quot;可部署&quot;不等于大规模商业化。</li><li>**小米世界模型 2.0 数据与仿真口径**：1260 万段视频片段的来源与授权未披露；0.4% 碰撞率为 1000 个闭环仿真场景结果，不等同真机或真实道路事故率；LIBERO Plus 成绩为项目报告口径。</li><li>**特斯拉 EMAG 交易细节**：申报未披露价格、具体资产范围与买方实体；约 220 名员工转移、萨拉赫厂区继续运营等均为德国当地媒体报道，双方未确认，一阶段审查结论预计 12 月 23 日前后。</li><li>**钛虎 Lite-1 轻量化关节模组**：新浪财经与智能制造网 11 月 27 日报道，另有来源称 11 月 26 日发布，发生时间待确认；轴向缩短 22.5%、带线安装空间节省 30%、结构件精简至 6 个均为企业口径，扭矩、精度、寿命等选型参数未披露。</li></ol></div>
+    <div class="extra-box"><h4>明日关注</h4><ol><li>12 月 1 日至 2 日加州 Humanoids Summit：特斯拉 Optimus Gen3 是否给出非预编程的现场演示。</li><li>12 月 23 日前后德国联邦卡特尔局对特斯拉收购 EMAG 资产的一阶段审查结论，是否转入二阶段。</li><li>智元精灵 G2 从质检上下料到喇叭 BOX 装配的良率与节拍数据，以及小鹏 IRON 一季度门店实习的落地门店与运行时长。</li></ol></div>
+  </section>
+
+  <footer>
+    <div class="row"><span>具身热点早晚报 · 内容摘编自公开媒体报道，来源可点击查看原文</span><span>2026 年 11 月 28 日</span></div>
+    <div class="row"><span>早班快讯 / 晚班全景每日自动更新 · 限定词按原文保留</span><span><a href="archive.html">历史目录</a> · 如有出入，以官方发布为准</span></div>
+  </footer>
+</div>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var panels=[].slice.call(document.querySelectorAll('.panel'));
+  function show(name){
+    tabs.forEach(function(t){t.classList.toggle('active',t.getAttribute('data-panel')===name);});
+    panels.forEach(function(p){p.classList.toggle('active',p.id==='panel-'+name);});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-panel'));});});
+  var h=(location.hash||'').replace('#','');
+  if(h==='morning'||h==='evening'||h==='qa'||h==='verify') show(h);
+})();
+</script>
+</body>
+</html>
